@@ -1,0 +1,87 @@
+/* CSS for New YUI Resizable Panel */
+.imgPanel .yui-resize-handle-br {
+	right:0;
+	bottom:0;
+	height: 8px;
+	width: 8px;
+	position:absolute;
+}
+.yui-skin-sam .yui-panel .yui-resize-handle.hidden {
+	display: none;
+}
+
+/* Panel Header */
+.yui-skin-sam .yui-panel .imgPanel.hd {
+	background-color: white;
+	padding:0 55px 0 10px;
+	height:30px;
+	overflow:hidden;
+}
+
+/* Panel Body */
+.yui-skin-sam .yui-panel .imgPanel.bd {
+	padding:0px;
+	display: block;
+	/*background: transparent;*/
+}
+.yui-skin-sam .yui-panel .refPanel.bd.hidden,
+.yui-skin-sam .yui-panel .imgPanel.bd.hidden {
+	display: none;
+}
+
+/* Panel Footer */
+.yui-skin-sam .yui-panel .imgPanel.ft {
+	height:20px;
+	display: block;
+}
+.yui-skin-sam .yui-panel .refPanel.ft.hidden,
+.yui-skin-sam .yui-panel .imgPanel.ft.hidden {
+	display: none;
+}
+
+/* Opacity Slider Background */
+.oSlider-bg {
+	position: relative;
+	background: url(../images/bg-fader.gif) 7px 12px no-repeat;
+	height: 28px;
+	width: 217px;
+	top: -20px;
+	left: 50px;
+}
+
+/* Opacity Slider Handle */
+.oSlider-thumb {
+	cursor: default;
+	position: absolute;
+	top: 4px;
+}
+.yui-skin-sam .container-toggle {
+	cursor:pointer;
+	height:15px;
+	position:absolute;
+	right:35px;
+	top:5px;
+	width:15px;
+	overflow:hidden;
+	text-decoration:none;
+	text-indent:-10000em;
+}
+.yui-skin-sam .container-toggle.plus {
+	background:transparent url(http://ajax.googleapis.com/ajax/libs/yui/2.6.0/build/assets/skins/sam/sprite.png) no-repeat scroll 0 -350px;
+}
+.yui-skin-sam .container-toggle.minus {
+	background:transparent url(http://ajax.googleapis.com/ajax/libs/yui/2.6.0/build/assets/skins/sam/sprite.png) no-repeat scroll 0 -400px;
+}
+
+.yui-skin-sam .yui-panel .refPanel.hd {
+	background-color: #F2F2F2;
+	height: 30px;
+	overflow:hidden;
+}
+.yui-skin-sam .yui-panel .refPanel.bd {
+	/*padding:0px;
+	background:white;*/
+	/*display: block;*/
+	font-size: 12px;
+	overflow:auto;
+}

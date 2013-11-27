@@ -1,0 +1,156 @@
+.HCTreeview, .HCTreeview ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.HCTreeview ul {
+	background-color: transparent;
+	margin-top: 4px;
+}
+
+.HCTreeview .hitarea {
+	background: url(../images/treeview/treeview-default.gif) -64px -25px no-repeat;
+	height: 16px;
+	width: 16px;
+	margin-left: -16px;
+	float: left;
+	cursor: pointer;
+}
+.HCTreeview .expandable-hitarea { 
+	background-position: -80px -3px; 
+}
+
+/* fix for IE6 */
+* html .hitarea {
+	display: inline;
+	float:none;
+}
+
+.HCTreeview li { 
+	margin: 0;
+	padding: 3px 0 2px 16px;
+	background: url(../images/treeview/treeview-default-line.gif) 0 0 no-repeat;
+}
+
+.HCTreeview li.item {
+	overflow: hidden;
+	height: 14px;
+}
+.HCTreeview li.noItem {
+	display: none;
+	line-height: 12px;
+	font-size: 12px;
+	color: #ff9090;
+	font-weight: bold;
+	margin-top: -2px;
+	padding-left: 20px;
+}
+.HCTreeview li.collapsable,
+.HCTreeview li.expandable { background-position: 0 -176px; }
+
+.HCTreeview li.last { background-position: 0 -1766px }
+.HCTreeview li.collapsable:last-child,
+.HCTreeview li.expandable:last-child {
+	background-image: url(../images/treeview/treeview-default.gif);
+}  
+.HCTreeview li.collapsable:last-child { background-position: 0 -111px }
+.HCTreeview li.expandable:last-child { background-position: -32px -67px }
+
+.HCTreeview li.collapsable:last-child > div.collapsable-hitarea,
+.HCTreeview li.expandable:last-child > div.expandable-hitarea {
+	background-position: 0; 
+}
+
+.HCTreeview div.folder,
+.HCTreeview div.empty {
+	padding: 0 0 1px 16px; 
+	display: block; 
+	line-height: 12px;
+	font-size: 12px;
+	cursor: default;
+}
+.HCTreeview div.folder.noChecker {
+	padding-left: 1px;
+	font-weight: bold;
+	color: #bbb;
+}
+
+.HCTreeview div.folder.external {
+	font-weight: bold;
+	margin-left: 2px;
+}
+.HCTreeview div.folder a,
+.HCTreeview div.folder a:visited {
+    color: #8d8d8d;
+    text-decoration:none;
+}
+.HCTreeview div.folder a:hover,
+.HCTreeview div.folder a:active {
+    color:#fff;
+}
+.HCTreeview div.marker {
+    display: block;
+    line-height: 15px;
+	height: 14px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFA93A;
+	margin-left: 18px;
+	margin-top: -2px;
+}
+.HCTreeview div.marker a,
+.HCTreeview div.marker a:visited {
+    color:#FFA93A;
+    text-decoration:none;
+	cursor: default;
+	padding-right:3px;
+}
+.HCTreeview div.marker a.hover {
+	color:#fff;
+}
+.HCTreeview div.marker a.enabled,
+.HCTreeview div.marker a.enabled:visited {
+	cursor: pointer;
+}
+.HCTreeview div.marker a.enabled:hover,
+.HCTreeview div.marker a.enabled:active {
+    color:#fff;
+}
+.HCTreeview div.folderChecker { 
+    background: url(../images/treeview/folder-closed.gif) 0 0 no-repeat;
+    height: 16px;
+    width: 16px;
+    float: left;
+    position: relative;
+    top: -2px;
+    cursor: pointer;
+}
+.HCTreeview div.folderChecker.checked {
+    background: url(../images/treeview/folder.gif) 0 0 no-repeat;
+}
+
+.HCTreeview img.loading {
+    height: 11px; 
+    padding-left: 5px; 
+    position: relative; 
+    top: 2px;
+}
+.HCTreeview img.narrative {
+    height: 11px; 
+    padding-left: 3px; 
+    position: relative; 
+	float: right;
+    top: 2px;
+	cursor: pointer;
+}
+
+.HCTreeview img.editItem {
+    height: 13px; 
+    padding-left: 3px; 
+    position: relative; 
+	float: right;
+    top: 0px;
+	cursor: pointer;
+	display: none;
+}

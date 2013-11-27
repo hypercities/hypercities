@@ -1,0 +1,55 @@
+<div id="searchFormWrapper">
+
+    <div id="searchSelectionWrapper">
+        <div id="addressSearchBtn" class="topTab searchSelectorBtn active">WHERE</div>
+        <div id="keywordSearchBtn" class="topTab searchSelectorBtn">WHAT</div>
+    </div>
+    <br />
+
+    <form id="addressSearch" name="addressSearch">
+            <div id="addressSearchForm">
+                    <div class="formItem">
+                            <label> Where do you want to go? </label><br/>
+                            <input id="address" type="text" name="address" class="textbox">
+                    </div>
+            </div>
+    </form>
+
+    <!--
+    <form id="keywordSearch" name="keywordSearch">
+            <div id="keywordSearchForm">
+                    <div class="formItem">
+                            <label> What do you want to search? </label>
+                            <input id="keyword" type="text" name="keyword" class="textbox">
+                    </div>
+                    <input id="resetBtn" type="submit" value="Reset" name="reset">
+                    <input id="searchBtn" type="submit" value="Search" name="search">
+            </div>
+
+    </form>-->
+
+    <form id="keywordSearch" name="keywordSearch">
+            <div id="keywordSearchForm">
+                    <div class="formItem">
+                            <label> What do you want to see? </label>
+                            <input id="keyword" type="text" name="keyword" class="textbox">
+                    </div>
+                    <div class="formItem">
+                        <label> Where do you want to search? </label><br />
+                        <input id="currentView" type="radio" name="where"
+							   value="CurrentView" checked /> In the Current View <br />
+                        <input id="everywhere" type="radio" name="where"
+							   value="Everywhere" /> Everything, Everywhere <br />
+                    </div>
+                    <input id="resetBtn" type="submit" value="Reset" name="reset">
+                    <input id="searchBtn" type="submit" value="Search" name="search">
+                    <input id="clearBtn" type="submit" value="Clear Results"
+						   name="clear" disabled="disabled">
+                    <div id="searchResults">
+                        Search Results:
+                        <span id="searchResultsPlacemarks">0</span> placemarks,
+                        <span id="searchResultsCollections">0</span> collections
+                    </div>
+            </div>
+    </form>    
+</div>

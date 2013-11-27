@@ -1,0 +1,2001 @@
+/**
+ * HyperCities Main Application CSS
+ *
+ * @author    HyperCities Tech Team
+ * @copyright Copyright 2009, The Regents of the University of California
+ * @date      2008-01-01
+ * @version   0.1
+ * @description CSS for main HyperCities application
+ *
+ */
+
+html, body, ul, ol, li {
+    font-family: Arial,Helvetica,sans-serif;
+    height: auto;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.link {
+	cursor: pointer;
+}
+.link:hover {
+	text-decoration: underline;
+}
+.link-selected {
+	color: #FFFFFF;
+	cursor: default;
+	font-weight: bold;
+	text-decoration: none;
+}
+.link-selected:hover {
+	text-decoration: none;
+}
+
+/* Main Map CSS */
+div.gearth_full{
+  background: #E8E8F2;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  font-size:13px;
+}
+
+div.gmap_full{
+  /*color: #0E0E66;*/
+  background: #E8E8F2;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;   
+  min-height: 100%;
+  font-size:13px;
+  display: none;
+  /*
+  position: absolute;
+  top: 0;
+  left: 0;
+   */
+}
+div.gmnoprint span {
+    /*color: #000000;*/
+}
+div.gmnoprint a {
+    color: #FFF;
+}
+
+#objectPermalink {
+    color: #00C;
+    font-style:normal;
+    text-decoration:none;
+}
+.ds {
+    background: #232323 none repeat scroll 0 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow:hidden;
+    position:absolute;
+}
+#ds .v1 { width: 1px; }
+#ds .v2 { width: 2px; }
+#ds .v3 { width: 3px; }
+#ds .v4 { width: 4px; }
+#ds .v5 { width: 5px; }
+#ds .o1 { opacity: 0.20; }
+#ds .o2 { opacity: 0.16; }
+#ds .o3 { opacity: 0.12; }
+#ds .o4 { opacity: 0.08; }
+#ds .o5 { opacity: 0.04; }
+
+/* Main Map GProgressbar CSS */
+#geoProgressContainer {
+	display: none;
+	font-size: 12px;
+	line-height: 17px;
+	height: 17px;
+	border: 1px solid #000;
+	background: #fff;
+	text-align: left;
+	opacity: 0.8;
+	overflow: hidden;
+}
+#geoProgressBar {
+	background: #FFA93A;
+	height: 16px;
+	border-right: 1px solid #CF892F;
+	border-bottom: 1px solid #CF892F;
+}
+#geoProgressText {
+	position: absolute;
+	width: 100%;
+	border: 5px;
+	text-align: center;
+	vertical-align: bottom;
+	font-weight: bold;
+	color: #111;
+}
+
+/* Main Map GInfoPanel CSS */
+#GInfoPanel {
+    color: #CCC;
+    float: right;
+    height: 50px;
+    right: 0;
+    margin: 0;
+    text-align:center;
+    width: auto;
+}
+#GInfoBackground {
+    background: #000;
+    opacity: 0.4;
+    height: 50px;
+}
+#GInfoLogo {
+    height: 30px;
+    float: right;
+    position: relative;
+    top: -44px;
+    right: 5px;
+    width: 180px;
+}
+#GInfoWrapper {
+    height: 30px;
+    top: -44px;
+    position: relative;
+    z-index: 999;
+    font-weight: bold;
+    width: 0px;
+}
+#GPlaceName {
+    height: 30px;
+    margin-right: 0;
+    width: auto;
+    float: left;
+}
+#GDateFrom {
+    margin-left: 10px;
+    height: 30px;
+    width: auto;
+    float: left;
+}
+#GDateTo {
+    height: 30px;
+    width: auto;
+    float: left;
+}
+#GDash {
+    color:#FFFFFF;
+    float:left;
+    height: 30px;
+    width:15px;
+    text-align:center;
+    padding-top:6px;
+    font-size:15px;
+}
+#GInfoWrapper .holder {
+    background:transparent url("../images/squareBox.png") no-repeat scroll 0 0;
+    color:#FFFFFF;
+    float:left;
+    font-size:13px;
+    height:30px;
+    margin-right:0;
+    padding-top:7px;
+    text-align:center;
+    text-transform:uppercase;
+    width:17px;
+}
+#GInfoWrapper .end {
+    margin-right:6px;
+}
+
+/* Main Map GTimeControl CSS */
+#GTimeControl {
+    width: 480px;
+    height: 32px;
+    background: transparent;
+}
+#GTCToggleButton {
+    background: transparent url('../images/TCBtn.png') no-repeat scroll 0 0;
+    width: 31px;
+    height: 31px;
+    float: left;
+    position: absolute;
+    cursor: pointer;
+}
+#GTCToggleButton.highlight {
+    background: transparent url('../images/TCBtn.png') no-repeat scroll 0 -32px;
+}
+#GTCPanel {
+    margin-left: 40px;
+    height: 45px;
+}
+#GTCPanel.hide {
+    margin-top: -50px;
+}
+.GTCButton {
+    margin-top: 2px;
+    background: #CCC;
+    border: 1px solid #000;
+    width: 17px;
+    height: 17px;
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+#GTCResetButton {
+/*    background: transparent url('../images/TCBtn.png') no-repeat scroll 0 0;  */
+    float: left;
+    left: 0px;
+}
+#GTCUndoButton {
+/*    background: transparent url('../images/TCBtn.png') no-repeat scroll 0 0;  */
+    float: left;
+    left: 5px;
+}
+#GTCCropButton {
+/*    background: transparent url('../images/TCBtn.png') no-repeat scroll 0 0;  */
+    float: right;
+    right: 0px;
+}
+#GTCSlider {
+    background: transparent url('../images/TCBg.png') repeat-x scroll 0 0;
+    width: 410px;
+    height: 31px;
+    float: left;
+    margin-left: 12px;
+}
+#GTCMinYear, #GTCMaxYear {
+    position: absolute;
+    margin-top: 26px;
+    width: 34px;
+    line-height: 11px;
+    background: #fff;
+    opacity: 0.8;
+    color:#000;
+    overflow: hidden;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+}
+#GTCMapYear {
+    display: none;
+}
+
+.LabeledMarker_markerLabel{
+    text-align: center;
+    color: black;
+    width: 25px;
+    letter-spacing: 0px;
+    padding: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+/* CSS for HCInfoWindow */
+.HCMaxInfoTitle {
+	font-size: 14px;
+	margin: 0px 18px;
+}
+
+.HCMaxInfoTitle h6 {
+	font-weight: bold;
+	padding-left: 18px;
+	margin: 0px;
+	font-size: 15px;
+}
+.HCMaxInfoTitle span {
+	color: #AAAAAA;
+}
+.HCMaxInfoTitle .prevLink {
+	float: left;
+}
+.HCMaxInfoTitle .nextLink {
+	float: right;
+}
+.HCMaxInfoTitle .enabled {
+	cursor: pointer;
+	text-decoration: underline;
+	color: #6261D8;
+}
+.HCMaxInfoTitle .enabled:hover {
+	color: #2200FF;
+}
+
+.HCMaxInfoSummary {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	min-height: 100px;
+	margin: 30px 15px 0px 0px;
+	border-top: 2px solid #FFAA39;
+}
+
+.HCMaxInfoSummary .banner {
+    background: transparent url('../images/HC_banner.jpg') no-repeat scroll 0 0;
+	height: 20px;
+	width: 103px;
+	position: absolute;
+	top: 10px;
+}
+
+.HCMaxInfoSummary .loading {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 22%;
+}
+
+.HCInfoWindow {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin-top: 20px;
+	min-height: 100px;
+	max-width: 300px;
+	border-top: 2px solid #FFAA39;
+}
+
+.HCInfoWindow .banner {
+    background: transparent url('../images/HC_banner.jpg') no-repeat scroll 0 0;
+	height: 20px;
+	width: 103px;
+	position: absolute;
+	top: 0px;
+}
+
+.HCInfoWindow .loading {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+}
+
+.HCInfoWindow .content {
+}
+
+.HCMaxInfoSummary .moreLink {
+	color: #6261D8;
+}
+
+.HCInfoWindow .moreLink,
+.HCInfoWindow .lessLink {
+	color: #6261D8;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	cursor: pointer;
+}
+
+.HCMaxInfoSummary .moreLink:hover,
+.HCInfoWindow .moreLink:hover,
+.HCInfoWindow .lessLink:hover {
+	color: #2200FF;
+}
+
+.HCContentTitle {
+    font-size: 13px;
+    color: #4d4d4d;
+    font-weight: bold;
+	max-height: 30px;
+	overflow: hidden;
+	padding: 5px 0px;
+}
+.HCContentMeta {
+    color: #4d4d4d;
+    font-size: 13px;
+    font-style: italic;
+}
+.HCContentText {
+    border-top: 1px dashed #4d4d4d;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+.HCContentPrev, 
+.HCContentNext {
+    display: inline;
+    top: 10px;
+    width: 30px;
+    position: absolute;
+    height: 100%;
+    cursor: pointer;
+}
+.HCContentPrev {
+    background: transparent url('../images/nevigate.png') no-repeat scroll 0 50%;
+    left: -30px;
+}
+.HCContentNext {
+    background: transparent url('../images/nevigate.png') no-repeat scroll -30px 50%;
+    right: -30px;
+}
+.HCContentPrev:hover {
+}
+.HCContentNext:hover {
+}
+/* SideBar CSS */
+
+/* Top Tabs & Panel CSS */
+#topPanelWrapper {
+    border: 1px solid #CCCCCC;
+    height: 170px;
+    margin: 2px 2px 5px 3px;
+    width: 303px;
+}
+#topPanel {
+    text-align: center;
+    height: 100%;
+    display: none;
+}
+#worldMapPanel {
+    top: 0px;
+    height: 100%;
+    position: relative;
+}
+#topTabWrapper {
+    margin: 5px 0 0 2px;
+    overflow: hidden;
+}
+.topTab {
+    color: #4D4D4D;
+    float: left;
+    font-size: 10px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    list-style-type: none;
+    margin: 0 1px;
+    padding: 0 5px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    width: 63px;
+    border: 1px solid #7C7C7C; 
+    opacity: 0.5;
+}
+#topTab a {
+    color: #7C7C7C;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+#topTab a:hover {
+    color: #C5C5C5;
+}
+#topTab .green {
+    background: #1C4400 none repeat scroll 0 0;
+}
+#topTab .blue {
+    background: #00254C none repeat scroll 0 0;
+}
+#topTab .red {
+    background: #470C00 none repeat scroll 0 0;
+}
+#topTab .yellow {
+    background: #333000 none repeat scroll 0 0;
+    //width: 62px;
+}
+#topTab .highlight {
+    color: #CCCCCC;
+    border: 1px solid #CCCCCC;
+    opacity: 1.0;
+}
+#topTab .highlight a {
+    color: #CCCCCC;
+}
+
+/* ToolBox Panel for KML Import etc.*/
+#toolPanelWrapper {
+    background:#666666 none repeat scroll 0 0;
+    border:1px solid;
+    margin: 2px 5px 2px 3px;
+    width: 303px;
+    height: 188px;
+    overflow: hidden;
+    float: right;
+    display: none;
+    z-index:10;
+    position:fixed;
+}
+#toolPanel {
+    height:100%;
+    text-align:center;
+}
+#toolPanel .formItem {
+    width: 100%;
+    text-align: left;
+    padding-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ccc;
+}
+#toolPanel .kmlTime {   
+    width: 40px;
+}
+/* Narrative Panel for Collection */
+#narrativePanelWrapper {
+    background: #fff none repeat scroll 0 0;
+    margin-left: 3px;
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    float: right;
+    display: none;
+    z-index:10;
+    position: absolute;
+    top: 0px;
+}
+.HCNarrativePanel {
+	padding: 0px 5px;
+	position: absolute;
+}
+.HCNarrativePanelInfo {
+	border: 0px;
+	background:#1F2022 url('../images/narrativeBg.png') repeat-x scroll 0 -30px;
+	margin:5px 0 8px;
+	padding: 10px;
+	color: #333;
+	font-size: 11px;
+}
+.HCNarrativePanelInfo.first .HCNarrativeMetadata {
+	padding-left: 0px;
+	color:#BBBBBB;
+}
+.HCNarrativePanelInfo.first .title {
+	padding-left: 0px;
+}
+.HCNarrativePanelInfo .HCNarrativeMetadata {
+	margin-bottom: 10px;
+	padding-left:17px;
+	color:#BBBBBB;
+}
+.HCNarrativePanelInfo .title {
+	color:#EE9F3B;
+	font-size:15px;
+	font-weight:bold;
+	height:34px;
+	overflow:hidden;
+	padding: 0 0 5px 15px;
+}
+.HCNarrativePanelInfo .description {
+	color: #BBBBBB;
+	font-family: verdana;
+    font-size: 13px;
+}
+.HCNarrativePanelInfo .description a {
+	color: #ddd;
+}
+.HCNarrativePanelInfo .toolbar {
+	background: #FDC240 url('../images/narrativeBg.png') repeat-x scroll;
+	bottom:0;
+	font-size:12px;
+	line-height: 20px;
+	height:25px;
+	margin:5px -10px -10px;
+	padding:3px 12px 0 8px;
+	position:relative;
+	text-align:right;
+	border-top:1px solid #FED274;
+}
+.HCNarrativePanelInfo .toolPanel {
+	float: right;
+	position: absolute;
+	min-height:30px;
+	right: 5px;
+	z-index: 100;
+	width: 250px;
+	border: 2px solid #FFB000;
+	background: #FAFAFA;
+	display:none;
+	padding: 5px;
+}
+
+.HCNarrativePanelInfo .toolPanel .permaLinkUrl {
+	border: 1px solid #0000a0;
+}
+
+.HCNarrativePanelInfo .toolPanel .optionList {
+	float: left;
+	width: 77px;
+	font-weight:bold;
+}
+
+.HCNarrativePanelInfo .toolPanelContent .link {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.HCNarrativePanelInfo .toolPanelContent .selected {
+	font-weight:bold;
+}
+.HCNarrativePanelInfo .toolPanelContent .title {
+	font-size: 12px;
+	padding: 0 0 3px 0;
+	color: #0000A8;
+	height: 17px;
+}
+.HCNarrativePanelInfo .toolbar .showExpandedBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -58px -48px;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	z-index: 99;
+	float: left;
+}
+.HCNarrativePanelInfo .toolbar .showExpandedBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -84px -48px;
+}
+
+.HCNarrativePanelInfo .toolbar .showListBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -6px -48px;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	z-index: 99;
+	float: left;
+	margin-left:3px;
+}
+.HCNarrativePanelInfo .toolbar .showListBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -32px -48px;
+}
+
+.HCNarrativePanelInfo .toolbar .editCollectionBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -214px -48px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+	z-index: 99;
+	float: left;
+	margin-left:3px;
+}
+.HCNarrativePanelInfo .toolbar .editCollectionBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -240px -48px;
+}
+
+.HCNarrativePanelInfo .toolbar .deleteCollectionBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -318px -48px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+	z-index: 99;
+	float: left;
+	margin-left:3px;
+}
+.HCNarrativePanelInfo .toolbar .deleteCollectionBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -344px -48px;
+}
+
+.prevLink,
+.nextLink,
+.HCNarrativePanelInfo .toolbar .optionLink,
+.HCNarrativePanelInfo .toolbar .permaLink {
+	color: #000;
+	text-decoration: underline;
+	cursor: pointer;
+	font-weight:bold;
+}
+.HCNarrativePanelInfo .extDate,
+.HCNarrativePanelItem .extDate {
+	margin-left: 3px;
+	display: none;
+}
+.HCNarrativePanelList {
+	background: #fff;
+	height: auto;
+}
+.HCNarrativePanelItem {
+	min-height: 60px;
+	margin-bottom: 6px;
+	font-family: Verdana;
+	font-size:13px;
+	padding: 5px;
+	background: #EFEFEF none repeat scroll 0 0;
+	color:#000000;
+	font-size:12px;
+	margin-right:1px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	border: 2px solid #E6E6E6;
+}
+.HCNarrativePanelItem:last-child {
+	margin-bottom: 0px;
+}
+.HCNarrativePanelItem.listView {
+	min-height: 32px;
+}
+.HCNarrativePanelItem:hover,
+.HCNarrativePanelItem.hover {
+	border-color: #AFAFAF;
+	background-color: #AFAFAF;
+}
+.HCNarrativePanelItem.selected {
+	border-color: #AFAFAF;
+	-moz-box-shadow: 1px 1px 5px #AAAAAA;
+	-webkit-box-shadow: 1px 1px 5px #AAAAAA;
+	background: -moz-linear-gradient(0% 100% 90deg, #E6E6E6, #C9C9C9, #C2C2C2 100%);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E6E6E6), to(#E6E6E6), color-stop(0,#C2C2C2));
+}
+.HCNarrativePanelItem .title {
+	font-weight: bold;
+	padding-bottom: 5px;
+	padding-right: 13px;
+	max-height: 28px;
+	overflow: hidden;
+}
+.HCNarrativePanelItem:hover .title,
+.HCNarrativePanelItem.hover .title {
+	color: #000000;
+}
+.citationLink {
+    color: #0000FF;
+    cursor:pointer;
+}
+
+.HCNarrativePanelItem .bookmarks {
+	height:120px;
+}
+
+.HCNarrativePanelItem .bookCover {
+	width: 60px;
+	height: 80px;
+	position: relative;
+	float: left;
+	padding: 10px;
+}
+.HCNarrativePanelItem .bookCover img {
+	height: 80px;
+	width: 55px;
+	border: 1px solid #666;
+	cursor: pointer;
+	box-shadow: 0 0 2px #333;
+}
+.HCNarrativePanelItem .pageNum {
+	float: right;
+	right: 5px;
+	font-size: 10pt;
+	color: #777;
+	position:relative;
+}
+
+.snapshotLink {
+    color: #0000FF;
+    cursor:pointer;
+}
+.HCNarrativePanel .loading {
+	text-align: center;
+	position: relative;
+	clear: both;
+}
+.HCNarrativePanelInfo .loading {
+	top: 0px;
+}
+.HCNarrativePanelList .loading {
+	height: 40px;
+	margin: 2px 0;
+	padding-top:25px;
+}
+.HCNarrativePanel .gripBtn {
+	background: transparent url('../images/grippy.png') repeat-y scroll 0px 1px;
+	width: 8px;
+	height: 42px;
+	position: relative;
+	cursor: move;
+	z-index: 99;
+	float: left;
+	margin: -5px 5px 0 -5px;
+	display: none;
+}
+.HCNarrativePanel .closeBtn {
+    background: transparent url('../images/HCIcons3.png') no-repeat scroll -162px -48px;
+    width: 22px;
+    height: 22px;
+    margin: 0px;
+    position: relative;
+    cursor: pointer;
+	z-index: 99;
+	float: right;
+	margin: 0 0 5px 5px;
+}
+.HCNarrativePanel .closeBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -188px -48px;
+}
+.HCNarrativePanel .centerBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -110px -48px;
+    width: 22px;
+    height: 22px;
+    margin: 0px;
+    position: relative;
+    cursor: pointer;
+	z-index: 99;
+	float: right;
+	margin: 0 0 5px 5px;
+}
+.HCNarrativePanel .centerBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -136px -48px;
+}
+.HCNarrativePanel .expandBtn {
+    background: #000000;
+    width: 9px;
+    height: 60px;
+	right: 6px;
+    position: relative;
+	float: right;
+    cursor: pointer;
+	z-index: 99;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	opacity: 0.4;
+	font-weight: bold;
+	color: #fff;
+	margin: 0 0 5px 16px; 
+	padding: 0 0 0 2px;
+	line-height: 60px;
+}
+.HCNarrativePanel .listView .expandBtn {
+	height: 32px;
+	line-height: 32px;
+}
+.HCNarrativePanel .expandBtn:hover {
+	width: 19px;
+	right: 2px;
+	padding-left: 0px;
+	margin-left: 8px;
+	font-size: 22px;
+}
+.HCNarrativePanelInfo.first .backBtn {
+	display: none;
+}
+.HCNarrativePanelInfo .backBtn {
+    background: #AAA;
+    width: 8px;
+    height: 70px;
+    margin: 0px;
+    position: absolute;
+    cursor: pointer;
+	z-index: 99;
+	left: 6px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	opacity: 0.8;
+	font-weight: bold;
+	color: #000000;
+	margin: 0 0 5px 5px; 
+	padding: 0 0 0 3px;
+	line-height: 70px;
+}
+.HCNarrativePanelInfo .backBtn:hover {
+	width: 16px;
+	padding: 0 0 0 3px;
+	font-size: 22px;
+	left: 3px;
+}
+.HCNarrativePanel .deleteBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -318px -48px;
+    width: 22px;
+    height: 22px;
+    margin: 0 0 0 5px;
+    position: relative;
+    cursor: pointer;
+	z-index: 99;
+	float: right;
+	display: none;
+}
+.HCNarrativePanel .deleteBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -344px -48px;
+}
+.HCNarrativePanel .editBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -214px -48px;
+    width: 22px;
+    height: 22px;
+    margin: 0 0 0 5px;
+    position: relative;
+    cursor: pointer;
+	z-index: 99;
+	float: right;
+	display: none;
+}
+.HCNarrativePanel .editBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -240px -48px;
+}
+.HCNarrativePanel .richObjBtn,
+.HCNarrativePanel .overlayBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -422px -48px;
+    width: 22px;
+    height: 22px;
+    margin: 0 0 0 5px;
+    position: relative;
+    cursor: pointer;
+	z-index: 99;
+	float: right;
+}
+.HCNarrativePanel .richObjBtn:hover,
+.HCNarrativePanel .overlayBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -448px -48px;
+}
+.HCNarrativePanel .richObjBtn.selected,
+.HCNarrativePanel .overlayBtn.selected {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -370px -48px;
+}
+.HCNarrativePanel .richObjBtn.selected:hover,
+.HCNarrativePanel .overlayBtn.selected:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -396px -48px;
+}
+.HCNarrativePanelItem .HCNarrativeMetadata,
+.HCNarrativePanelItem .HCNarrativeContent {
+	display:none;
+}
+.HCNarrativeContent {
+	overflow: hidden;
+}
+
+#narrativeInfoWrapper {
+	height: 75px;
+	text-align: left;
+	border: 1px solid #999999;
+	margin: 3px 0 5px;
+	padding: 5px;
+	font-size: 11px;
+	overflow: hidden;
+}
+#narrativeInfo {
+	position: relative;
+}
+#narrativeInfo strong {
+	font-weight: bold;
+	color: #DDDDDD;
+	padding: 5px 0px;
+	font-size: 15px;
+}
+#narrativePanel {
+    height: 100%;
+    text-align:center;
+	font-size: 12px;
+	margin-bottom: 2px;
+}
+#narrativeToolPanel {
+    position: absolute;
+	right: 5px;
+	top: 44px;
+	z-index: 99;
+	text-align: right;
+}
+
+.narrativeItem {
+    border:1px solid #333333;
+    margin:0 0 2px;
+    padding: 4px;
+    width: auto;
+    opacity: 1.0;
+    text-align: left;
+}
+.narrativeItem:hover {
+    background: #0D0D0D;
+    border-color: #999999;
+    opacity:1.0;
+}
+.narrativeItem.notInView {
+    border-style: dashed;
+}
+.narrativeItem:hover .narrativeTitle strong,
+#narrativeList .highlight .narrativeTitle strong,
+#narrativeItem_error .narrativeTitle strong {
+        color: #FFA93A;
+}
+.narrativeText {
+	overflow-x: hidden;
+}
+.narrativeItem:hover .narrativeText,
+.narrativeItem:hover .narrativeExpand,
+.narrativeItem:hover .narrativeExpand a,
+#narrativeList .highlight .narrativeExpand a,
+#narrativeList .highlight .narrativeText,
+#narrativeItem_error .narrativeText {
+        color: #CCCCCC;
+}
+#narrativeList .highlight .narrativeText {
+        min-height: 60px;
+}
+.narrativeItem:hover .narrativeExpand {
+        background: #0D0D0D;
+}
+#narrativeList .highlight .narrativeExpand {
+        background: #3C3C3C;
+}
+/* IntelliTab & IntelliList CSS */
+#intelliListWrapper {
+    border: 0;
+    margin: 2px 2px 2px 3px;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+#intelliList{
+    height: 100%;
+}
+#intelliTabWrapper {
+    margin: 5px 0 0 1px;
+    overflow: hidden;
+}
+.intelliSync {
+    float: left;
+    position: absolute;
+    width: 16px;
+	height: 28px;
+    left: 153px;
+}
+#intelliSync {
+    background: transparent url("../images/syncMap.png") no-repeat scroll 0 -16px;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 7px;
+    cursor: pointer;
+}
+#intelliSync.syncMap {
+    background: transparent url("../images/syncMap.png") no-repeat scroll 0 0;
+}
+.intelliTab {
+    color: #4D4D4D;
+    background: #333333;
+    float: left;
+    font-size: 10px;
+    font-weight: bold;
+    height: 28px;
+    line-height: 26px;
+    list-style-type: none;
+    margin: 0 1px 0 2px;
+    padding: 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    width:129px;
+    border: 1px solid #7C7C7C;
+    opacity: 0.5;
+}
+#intelliTab a {
+    color: #7C7C7C;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#intelliTab a:hover {
+    color: #A5A5A5;
+}
+#intelliTab .highlight {
+    color: #CCCCCC;
+    border: 1px solid #CCCCCC;
+    opacity: 1.0;
+}
+#intelliTab .highlight a {
+    color: #CCCCCC;
+    height: 28px;
+}
+
+/* IntelliItem CSS */
+#intelliList .highlight {
+    border: 2px solid #CCCCCC;
+    color: #CCCCCC;
+    background: #3C3C3C;
+    cursor: default;
+    opacity: 1.0;
+}
+.intelliItem {
+    border:1px solid #333333;
+    margin:0 0 2px;
+    padding: 4px;
+    width: auto;
+    opacity: 0.8;
+}
+.intelliItem:hover {
+    background: #0D0D0D;
+    border-color: #999999;
+    opacity:1.0;
+}
+.intelliItem:hover .intelliImg, 
+#intelliList .highlight .intelliImg, 
+#intelliItem_error .intelliImg {
+    opacity: 1.0;
+}
+.intelliItem:hover .intelliTitle, 
+#intelliList .highlight .intelliTitle, 
+#intelliItem_error .intelliTitle {
+    color: #FFFFFF;
+}
+.intelliItem:hover .intelliTitle strong, 
+#intelliList .highlight .intelliTitle strong, 
+#intelliItem_error .intelliTitle strong {
+    color: #FFA93A;
+}
+.intelliItem:hover .intelliText,
+.intelliItem:hover .intelliExpand,
+.intelliItem:hover .intelliExpand a,
+#intelliList .highlight .intelliExpand a,
+#intelliList .highlight .intelliText,
+#intelliItem_error .intelliText {
+    color: #CCCCCC;
+}
+#intelliList .highlight .intelliText {
+    min-height: 60px;
+}
+.intelliItem:hover .intelliExpand {
+    background: #0D0D0D;
+}
+#intelliList .highlight .intelliExpand {
+    background: #3C3C3C;
+}
+.intelliImg {
+    background: #5D5D5D;
+    border: 1px solid #CCCCCC;
+    float: left;
+    height: 50px;
+    width: 50px;
+    font-size: 10px;
+    line-height: 12px;
+    cursor:pointer;
+    opacity: 0.7;
+}
+.intelliOC {
+    background: transparent url('../images/opacitySlider.png') no-repeat scroll -12px 0;
+    width: 57px;
+    height: 20px;
+    position: relative;
+    left: -3px;
+    top: 5px;
+}
+.intelliTitle {
+    color: #CCCCCC;
+    position: absolute;
+    font-size: 13px;
+    line-height: 17px;
+    left: 33px;
+    height: 17px;
+    width: auto;
+    margin: 0;
+    padding: 0 30px;
+    overflow: hidden;
+    font-weight: bold;
+    cursor: pointer;
+}
+.intelliTitle strong {
+    color: #DB9132;
+    font-size: 17px;
+    font-weight: normal;
+}
+.intelliTitle span {
+    overflow: hidden;
+}
+.intelliInfo {
+    background: transparent url('../images/info.png') no-repeat scroll 0 -16px;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    margin-top: 0px;
+
+}
+.intelliInfo:hover {
+    background: transparent url('../images/info.png') no-repeat scroll 0 0;
+}
+.intelliText {
+    font-size: 11px;
+    line-height: 12px;
+    height: 36px;
+    padding: 16px 0 0 7px;
+    overflow: hidden;
+    min-height: 36px;
+    cursor: pointer;
+}
+.intelliExpand {
+    float: right;
+    position: relative;
+    font-size: 11px;
+    line-height: 12px;
+    height: 12px;
+    overflow: hidden;
+    background: #232323;
+    top: -12px;
+}
+.intelliExpand a, 
+.intelliExpand a:visited, 
+.intelliExpand a:active {
+    color: #8D8D8D;
+    text-decoration: none;
+}
+#intelliList .expand {
+    height: auto;
+    padding-bottom: 12px;
+}
+#intelliItem_error {
+    cursor: default;
+    border-color: #CCCCCC;
+}
+#intelliItem_error:hover {
+    background: transparent;
+    border-color: #CCCCCC;
+}
+ /* Maginfiying Glass icon in Maps List */
+.intelliZoom {
+    background: transparent url('../images/zoomBtn.png') no-repeat scroll 0 -16px;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin-top: 0;
+    position: absolute;
+    /*top:20px;*/
+    margin-top: 20px;
+    right: 10px;
+    /*left:274px;*/
+}
+.intelliZoom:hover {
+	background: transparent url('../images/zoomBtn.png') no-repeat scroll 0 0;
+}
+#baseCollectionReset {
+	background:none repeat scroll 0 0 #000033;
+	border:1px solid;
+	cursor:pointer;
+	font-size:small;
+	font-weight:bold;
+	padding:2px;
+	text-align:right;
+}
+#baseCollectionReset:hover {
+	background:none repeat scroll 0 0 #000099;
+	color: #FFF;
+}
+/* Map Info Panel CSS */
+#mapInfoPanel {
+    background: #fff;
+    width: 600px;
+    height: 450px;
+    /* opacity does not work in firefox when overlay two divs */
+    /*opacity: 0.75;*/
+    z-index: 6000;
+    position: absolute;
+    border: 5px solid #ccc;
+}
+#mapInfoWrapper {
+    width: 582px;
+    height: 375px;
+    margin: 0px 3px 26px 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    float: left;
+}
+#mapInfoWrapper .thumbnail {
+    width: 100px;
+    height: 100px;
+    float: right;
+    right: 25px;
+    margin: 0 10px;
+    border: 2px solid #666;
+    top: 2px;
+}
+#mapInfoWrapper .thumbnail img{
+    width: 100px;
+    height: 100px;
+    border: 0px;
+}       
+#mapInfoWrapper .formItem {
+    width: 560px;
+    border-top: 1px dashed #999;
+    line-height: 30px;
+    font-size: 13px;
+    color: #3c3c3c;
+}
+#mapInfoWrapper .formItem.first {
+    border: 0px;
+    padding-top: 10px;
+    width: 440px;
+}
+#mapInfoWrapper .formItem.short {
+    width: 440px;
+}
+#mapInfoWrapper .formItem .label {
+    float: left;
+    font-weight: bold;
+    width: 180px;
+    text-align: right;
+    margin: 0 20px 0 0;
+}
+#mapInfoWrapper .formItem .formData {
+    width: 360px;
+    line-height: 18px;
+    min-height: 18px;
+    padding: 6px 6px 6px 200px;
+    text-align: left;
+}
+#mapInfoWrapper .formData .editableS,
+#mapInfoWrapper .formData .editableW,
+#mapInfoWrapper .formData .editableD,
+#mapInfoWrapper .formData .editableA {
+    overflow: hidden;
+}
+#mapInfoWrapper .formData .editableW:hover,
+#mapInfoWrapper .formData .editableD:hover,
+#mapInfoWrapper .formData .editableA:hover {
+}
+#mapInfoWrapper .formData .editHighlight {
+    position: relative;
+    height: 15px;
+    left: -3px;
+    top: 0px;
+    display: inline;
+}
+#mapInfoWrapper .formData .editHighlight input,
+#mapInfoWrapper .formData .editHighlight textarea {
+    font-family: Arial,Helvetica,sans-serif;
+    background: #ccc;
+    border: 0;
+    font-size: 13px;
+    line-height: 15px;
+    padding: 0 2px;
+    overflow: hidden;
+}
+#mapInfoPanel .button {
+    border: 1px solid #ccc;
+    color: #333;
+    background: #777;
+    font-size: 15px;
+    font-weight: bold;
+    float: right;
+    text-align: center;
+    position: absolute;
+    bottom: 12px;
+    height: 20px;
+    display: none;
+}
+#mapInfoPanel .button a {
+    color: #fff;
+    text-decoration:none;
+    position: relative;
+    top: 1px;
+}
+#mapInfoPanel .button a:hover {
+    color: #333;
+}
+#mapInfoPanel #resetBtn {
+    width: 70px;
+    left : 12px;
+}
+#mapInfoPanel #saveBtn {
+    width: 120px;
+    right: 100px;
+}
+#mapInfoPanel #exportBtn {
+    width: 70px;
+    right: 24px;
+}
+#titleMapInfoPanel {
+    border-bottom: 1px solid #000;
+    float: left;
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    width: 170px;
+    height: 20px;
+    line-height: 20px;
+    padding: 5px 16px;
+}
+#closeMapInfoPanel {
+    background: transparent url('../images/close.gif') no-repeat scroll 0 -12px;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    position: relative;
+    float: right;
+    cursor: pointer; 
+}
+
+/* Search Form CSS */
+
+#searchSelectionWrapper {
+    width:100%;
+}
+
+.searchSelectorBtn {
+    opacity:0.9;
+    border-color:#FFFFFF;
+    border-width:1px;
+    color:#CCC;
+    background-color: #666;
+    font-size:13px;
+    font-weight:bold;
+    text-decoration:none;
+    width: 136px;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+#searchSelectionWrapper .active {
+    background-color:#00A;
+    color: #FFF;
+}
+
+#addressSearchBtn, #keywordSearchBtn {
+    cursor:pointer;
+}
+
+
+#searchResults {
+    font-size: 12px;
+    font-weight:bold;
+    margin-top:7px;
+    text-align:right;
+    display: none;
+}
+
+#searchResultsPlacemarks, #searchResultsCollections {
+
+}
+
+#addressSearchForm, 
+#keywordSearchForm {
+	text-align: right;
+	padding: 10px 15px;
+	height: 22px;
+}
+
+#keywordSearchForm {
+    display:none;
+}
+
+#addressSearchForm .formItem,
+#keywordSearchForm .formItem {
+    width: 100%;
+    text-align: left;
+    padding-top: 0px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ccc;
+}
+#addressSearchForm .formItem .textbox,
+#keywordSearchForm .formItem .textbox {
+    font-size: 13px;
+    font-weight: bold;
+    width: 225px;
+    padding: 0 0 1px 2px;
+	margin-top: 5px;
+    border: 1px solid #666;
+    background: #444;
+    color: #ccc;
+	position: relative;
+	left: -3px;
+}
+#keywordSearchForm .formItem .textbox {
+	width: 272px;
+}
+
+#addressSearchForm .formItem .textbox:focus,
+#keywordSearchForm .formItem .textbox:focus {
+    background:#CCCCCC;
+    color:black;
+}
+
+#gotoBtn, #searchBtn, #keywordSearchForm #resetBtn, #clearBtn {
+    cursor: pointer;
+    position: relative;
+    height: 19px;
+    top: 2px;
+    margin-top: 5px;
+    border-color: #ccc #777 #777 #ccc;
+    border-width: 1px;
+    border-style: solid;
+    background: #666;
+    font-weight: bold;
+    color: #ccc;
+}
+#gotoBtn:hover, #searchBtn:hover {
+    color: #fff;
+}
+#keywordSearchForm #resetBtn:hover {
+	color: #a00000
+}
+
+/* Main Framework CSS */
+#loadingMessage {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    text-align: center;
+    /*background: white none repeat scroll 0 0;*/
+    color: #CCCCCC;
+    font-weight: bold;
+    font-size: 38px;
+    z-index: 9998;
+    opacity: 0.8;
+}
+#loadingMessageWrapper {
+    background: #000000 none repeat scroll 0 0;
+    left: 35%;
+    top: 45%;
+    position: absolute;
+    width: 25%;
+    padding: 2px 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+#loadingMessage img {
+    vertical-align:middle;
+}
+.dr {
+    background: #000000; 
+    display: block; 
+    height: 1px; 
+    overflow: hidden;
+    font-size: 1px;
+}
+#dr .r1 { margin:0 1px; }
+
+#warningMessage {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align:middle;
+    padding-top:10%;
+    font-size: 24px;
+    background: #666;
+    z-index: 9999; 
+}
+#warningMessage a,
+#warningMessage a:visited {
+	color: #aaa;
+}
+#warningMessage a:hover {
+	color: #fff;
+}
+#blackoutPanel{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background: #000;
+    z-index: 5000;
+    display: none;
+}
+#contentWrapper {
+    clear: both;
+    float: left;
+    height: 100%;
+    width: auto;
+    top: 0;
+    left: 0;
+    right: 320px;
+    position: absolute;
+    z-index: 10;
+}
+
+#sidebarWrapper {
+    margin: 0;
+    padding: 0 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 310px;
+    height: 100%;
+    z-index: 99;
+}
+#sidebarWrapper.dark {
+    background: #232323 !important;
+    color: #8D8D8D;
+}
+#sidebarWrapper.light {
+    background: #8D8D8D !important;
+    color: #CFCFCF;
+}
+
+/* for add media controller on GMAP*/
+.addMediaBtn {
+	width:42px;
+	height:42px;
+	cursor: pointer;
+	position: relative;
+	margin-top: -3px;
+	display: none;
+}
+.addMediaBtn.selected {
+	opacity: 0.9;
+	cursor: default;
+}
+
+#addMediaBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -2px -2px; 
+	margin-top: 0px;
+	display: block;
+}
+#addMediaBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -50px -2px;
+}
+#addMediaBtn.enabled {
+	opacity: 0.5;
+}
+
+#addMarkerBtn {
+    background: transparent url('../images/HCIcons3.png') no-repeat scroll -98px -2px;
+}
+#addMarkerBtn.unselected:hover {
+    background: transparent url('../images/HCIcons3.png') no-repeat scroll -146px -2px; 
+}
+
+#addLineBtn {
+    background: transparent url('../images/HCIcons3.png') no-repeat scroll -194px -2px; 
+}
+#addLineBtn.unselected:hover {
+    background: transparent url('../images/HCIcons3.png') no-repeat scroll -242px -2px; 
+}
+
+#addPolyBtn {
+    background: transparent url('../images/HCIcons3.png') no-repeat scroll -338px -2px; 
+}
+#addPolyBtn.unselected:hover {
+    background: transparent url('../images/HCIcons3.png') no-repeat scroll -290px -2px; 
+}
+
+#addKmlBtn {
+    background: transparent url('../images/HCIcons3.png') no-repeat scroll -386px -2px; 
+}
+#addKmlBtn.unselected:hover {
+    background: transparent url('../images/HCIcons3.png') no-repeat scroll -434px -2px; 
+}
+
+#addColBtn {
+    background: transparent url('../images/HCIcons3.png') no-repeat scroll -584px -45px; 
+}
+#addColBtn.unselected:hover {
+    background: transparent url('../images/HCIcons3.png') no-repeat scroll -626px -45px; 
+}
+
+/*add media form */
+#add_media_form .form-item{
+  border-bottom: 1px dashed gainsboro;
+  clear: left;
+  padding: 2px;
+}
+#add_media_form label {
+      float:left;
+      font-weight:bold;
+      height:20px;
+      line-height:25px;
+      width:100px;
+      text-align:right;
+      margin-right: 20px;
+	  font-size: 14px;
+      color: #DB9132;
+
+}
+#add_media_form input 
+{
+    font-size:15px;
+    height:20px;
+    width:200px;
+	border:1px solid;
+}
+#bottomBar{
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  text-align:right;       
+}
+#bottomBar a
+{
+  color: #818181;    
+  font-size:12px;
+  margin-right: 10px;
+}
+#bottomBar input
+{
+    padding-left: 5px;    
+}
+
+/*add media file input */
+div.fileinputs {
+	position: relative;
+}
+
+div.fakefile {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+
+}
+
+input.file {
+	position: relative;
+	text-align: right;
+	-moz-opacity:0 ;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+	width:10px;
+}
+
+
+
+/*add year form*/
+#add_year_form .form-item{
+	clear: left;
+	padding: 5px;
+	font-size: 12px;
+	height: 24px;
+	color: #DB9132;
+	font-weight:bold;
+	overflow: hidden;
+}
+#add_year_form label {
+	float:left;
+	font-weight:bold;
+	height:20px;
+	margin-left:-5px;
+	margin-top:3px;
+	padding-left:5px;
+	padding-right:5px;
+	width:80px;
+	text-align: right;
+	font-size:12px;
+	color: #DB9132;
+}
+#add_year_form a{
+	text-decoration:none;
+	padding: 2px;
+	color: #818181;
+	position: absolute;
+	right: 20px;
+	font-size: 10px;
+}
+#form_pair_item a{
+    color: #818181;
+    font-size: 12px;
+    text-decoration:none;
+    width: 190px;
+    height: 20px;
+    z-index: 95;
+    background: whitesmoke;
+    position: relative;
+    top: -20px;
+    left: 185px;
+    display: block;
+}
+#form_pair_item{
+  border: solid gainsboro 1px;
+  margin: 5px;
+  background: whitesmoke;
+}
+#form_pair_item input{
+    margin-right: 7px;
+	margin-left: 2px;
+	border:1px solid;
+	vertical-align: bottom;
+}
+#add_to_form a{
+  text-decoration:none;
+  color: #DB9132;
+  font-size: 14px;
+
+}
+#add_a_new {
+  font-size: 14px;
+  color: #818181;
+}
+#addOwnCTitle{
+  font-size: 14px;
+  color: #DB9132;
+  padding: 2px;
+}
+#addOtherCTitle{
+  font-size: 14px;
+  color: #DB9132;
+  padding: 2px;
+}
+#add_add2new {
+  font-size: 14px;
+  color: #DB9132;
+  border: 1px solid gainsboro;
+  background: whitesmoke;
+  padding: 5px;
+}
+#form_pair_item .month{
+ width:18px;
+}
+#form_pair_item .date{
+ width:18px;
+}
+#form_pair_item .hour{
+ width:18px;
+}
+#form_pair_item .min{
+ width:18px;
+}
+#own_collections{
+  padding: 5px;
+  border: 1px solid gainsboro;
+  background: whitesmoke;
+  color: #818181;
+  height: 115px;
+  font-size: 12px;
+  overflow: auto;
+}
+#other_collections{
+  padding: 5px;
+  color: #818181;
+  border: 1px solid gainsboro;
+  background: whitesmoke;
+  font-size: 12px;
+  height: 115px;
+  overflow: auto;
+}
+#preview_form{
+  overflow: auto;
+  height: 350px;
+  color: #000000;
+}
+#snapshotListTbody {
+    height: 350px;
+    width: 225px;
+    overflow: scroll;
+}
+#preview_form span{
+  color: #000000;
+}
+
+/*for earth panel, Jay:02/14/2009*/
+#mapPanelWrapper {
+  border: 1px solid #CCCCCC;
+  margin: 2px 2px 5px 3px;
+  width: 303px;
+  height: auto;
+  overflow: hidden;
+}
+#mapPanel {
+  text-align: center;
+  height: 100%;
+}
+
+#earthPanel {
+  text-align: center;
+  height: auto;
+}
+.options {
+  float:left;
+  font-size:14px;
+  line-height:2;
+}
+
+.addthis_toolbox {
+  position: absolute;
+  height: 16px;
+  width: 64px;
+  left: 110px;
+  top: 2px;
+}
+
+.addthis_toolbox_max {
+	position: absolute;
+	height: 16px;
+	width: 112px;
+	right: 20px;
+	top: 12px;
+}
+
+#helpPanelWrapper {
+    position:absolute;
+    left:0px;
+    height:100%;
+    width:100%;
+    z-index:999;
+    display:none;
+}
+
+#helpPanel {
+    display:none;
+    height:85%;
+    width:65%;
+    top: 3%;
+    left:20%;
+    position:absolute;
+    /*padding:20px;
+    
+    background: Tan none repeat scroll 0 0;
+    border: 6px double white;
+    padding: 10px 10px 10px 15px;*/
+}
+#helpPanelClose {
+    background: transparent url('../images/close.gif') no-repeat scroll 0 -24px;
+    cursor:pointer;
+    position:absolute;
+    left: 788px;
+    top:10px;
+    height: 12px;
+    width: 20px;
+    z-index:1000;
+}
+#helpPanelFrame {
+    top: 20px;
+    height:610px;
+    width:828px;
+    overflow:hidden;
+}
+#helpPanelFrame iframe {
+    width:100%;
+    height:100%;
+    border: none;
+}
+
+#resetMapBtn {
+	background: transparent url("../images/HCIcons3.png") no-repeat -482px -2px;
+	width: 42px;
+	height: 42px;
+	cursor: pointer;
+	overflow: hidden;
+}
+#resetMapBtn:hover {
+	background: transparent url("../images/HCIcons3.png") no-repeat -530px -2px;
+}
+
+#saveMapBtn {
+	background: transparent url("../images/HCIcons3.png") no-repeat -626px -2px;
+	width: 42px;
+	height: 42px;
+    cursor: pointer;
+    overflow: hidden;
+}
+#saveMapBtn:hover {
+	background: transparent url("../images/HCIcons3.png") no-repeat -578px -2px;
+}
+
+.zoomToButton {
+    /*text-align:right;*/
+    float:right;
+    position: absolute;
+    right: 10px;
+    /*top: 0px;*/
+    z-index: 99;
+}
+
+
+.zoomToButton:hover {
+    cursor:pointer;
+}
+
+#maxcontent .bookmarks {
+	height:120px;
+	padding-top:10px;
+}
+#maxcontent .bookCover {
+	width: 60px;
+	height: 80px;
+	position: relative;
+	float:left;
+	padding:10px;
+}
+#maxcontent .bookCover img {
+	height: 80px;
+	width: 55px;
+	border: 1px solid #666;
+	cursor:pointer;
+}
+#maxcontent .pageNum {
+	float: right;
+	right: 5px;
+	font-size: 10pt;
+	color: #777;
+	position:relative;
+}
+
+
+/*#narrativeToolPanel {
+    position: absolute;
+	right: 5px;
+	top: 44px;
+	z-index: 99;
+	text-align: right;
+}*/
+

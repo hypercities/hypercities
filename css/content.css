@@ -1,0 +1,26 @@
+.Itemflash {
+
+    background-image:url(../images/flash.gif);
+}
+.Itemshockwave {
+    background-image:url(../images/shockwave.gif);
+}
+.Itemqt {
+
+    background-image:url(../images/quicktime.gif);
+}
+.Itemwmp {
+
+    background-image:url(../images/windowsmedia.gif);
+}
+.Itemrmp {
+    background-image:url(../images/realmedia.gif);
+}
+
+.Itemflash, .Itemshockwave, .Itemqt, .Itemwmp, .Itemrmp 
+{
+    background-color:#FFFFCC;
+    background-position:center center;
+    background-repeat:no-repeat;
+    border:1px dotted #CC0000;
+}

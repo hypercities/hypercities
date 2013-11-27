@@ -1,0 +1,1167 @@
+/**
+ * HyperCities Edit Panel CSS
+ *
+ * @author    HyperCities Tech Team
+ * @copyright Copyright 2009, The Regents of the University of California
+ * @date      2010-03-01
+ * @version   0.1
+ * @description CSS for object editing panel
+ *
+ */
+
+/* Add Object Panel */
+#objectEditPanelWrapper {
+	background: #fff none repeat scroll 0 0;
+	margin-left: 3px;
+	width: auto;
+	height: 100%;
+	overflow: hidden;
+	float: right;
+	display: none;
+	z-index:10;
+	position: absolute;
+	top: 0px;
+}
+.HCObjectEditPanel {
+	padding: 0px 5px;
+	position: absolute;
+}
+#HCMetaForm {
+	overflow: hidden;
+}
+.HCObjectEditPanelHead {
+	border: 0px;
+	background: #1F2022 url('../images/narrativeBg.png') repeat-x scroll 0 -30px;
+	margin: 5px 0px 8px;
+	padding: 10px;
+	color: #333;
+	font-size: 11px;
+}
+.HCObjectEditPanelHead h6 {
+	color: #DDD;
+	font-size: 16px;
+	line-height: 24px;
+	height: 24px;
+	margin: 0px;
+	overflow: hidden;
+	text-shadow: 1px 1px 0 #000;
+}
+.HCObjectEditPanelHead .formItem {
+	height: 28px;
+	padding-left: 70px;
+}
+.HCObjectEditPanelHead label {
+	color: #EE9F3B;
+	position: relative;
+	float: left;
+	left: -70px;
+	width: 60px;
+	margin: 5px 10px 0 0;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: right;
+}
+.HCObjectEditPanelHead .formField {
+	position: relative;
+	top: -24px;
+	width: 100%;
+}
+.HCObjectEditPanelHead .formPromptText {
+	color: #666;
+	font-size: 16px;
+	line-height: 18px;
+	height: 18px;
+	overflow: hidden;
+	padding: 6px 4px 0;
+	position: absolute;
+	text-align: left;
+	white-space: nowrap;
+}
+.HCObjectEditPanelHead input {
+	position: relative;
+	top: -23px;
+	border: 0px;
+	border-bottom: 1px solid #CCC;
+	color: #CCC;
+	height: 21px;
+	line-height: 18px;
+	font-size: 16px;
+	background: transparent;
+	padding: 2px 3px 0;
+	width: 100%;
+}
+.HCObjectEditPanelHead input:focus {
+	border-color: #FFF;
+}
+.HCObjectEditPanelHead input::-moz-selection {
+	background: #EEE;
+	color: #333;
+}
+.HCObjectEditPanelHead input::selection {
+	background: #EEE;
+	color: #333;
+}
+
+.HCObjectEditPanelHead .toolbar {
+	background: #FDC240 url('../images/narrativeBg.png') repeat-x scroll;
+	bottom: 0px;
+	font-size: 12px;
+	line-height: 20px;
+	height: 25px;
+	margin: 5px -10px -10px;
+	padding: 3px 12px 0 8px;
+	position: relative;
+	text-align: right;
+	border-top:1px solid #FED274;
+}
+.HCObjectEditPanelHead .toolPanel {
+	float: right;
+	position: absolute;
+	min-height:30px;
+	right: 5px;
+	z-index: 100;
+	width: 250px;
+	border: 2px solid #FFB000;
+	background: #FAFAFA;
+	display: none;
+	padding: 5px;
+}
+.HCObjectEditPanelHead .toolbar .toolbarBtn {
+	cursor: pointer;
+	width: 22px;
+	height: 22px;
+	margin-left: 3px;
+	z-index: 95;
+	float: left;
+}
+.HCObjectEditPanelHead .toolbar .contentBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -6px -48px;
+}
+.HCObjectEditPanelHead .toolbar .contentBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -32px -48px;
+}
+.HCObjectEditPanelHead .toolbar .objectBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -526px -48px;
+}
+.HCObjectEditPanelHead .toolbar .objectBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -552px -48px;
+}
+.HCObjectEditPanelHead .toolbar .baseMapBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -474px -48px;
+}
+.HCObjectEditPanelHead .toolbar .baseMapBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -500px -48px;
+}
+.HCObjectEditPanelHead .toolbar .shareBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -58px -48px;
+}
+.HCObjectEditPanelHead .toolbar .shareBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -84px -48px;
+}
+.HCObjectEditPanelHead .toolbar .settingBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -214px -48px;
+}
+.HCObjectEditPanelHead .toolbar .settingBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -240px -48px;
+}
+.HCObjectEditPanelHead .toolbar .privilegeBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -526px -74px;
+}
+.HCObjectEditPanelHead .toolbar .privilegeBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -552px -74px;
+}
+.HCObjectEditPanelHead .toolbar .bookBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -474px -74px;
+  /*display: none
+  */
+}
+.HCObjectEditPanelHead .toolbar .bookBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -500px -74px;
+  /*display: none
+  */
+}
+/**
+.HCObjectEditPanelHead .toolPanel .permaLinkUrl {
+	border: 1px solid #0000a0;
+}
+
+.HCObjectEditPanelHead .toolPanel .optionList {
+	float: left;
+	width: 77px;
+	font-weight:bold;
+}
+
+.HCObjectEditPanelHead .toolPanelContent .link {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.HCObjectEditPanelHead .toolPanelContent .selected {
+	font-weight:bold;
+}
+.HCObjectEditPanelHead .toolPanelContent .title {
+	font-size: 12px;
+	padding: 0 0 3px 0;
+	color: #0000A8;
+	height: 17px;
+}
+
+
+
+.HCObjectEditPanelHead .toolbar .deleteCollectionBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -318px -48px;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	z-index: 99;
+	float: left;
+	margin-left:3px;
+}
+.HCObjectEditPanelHead .toolbar .deleteCollectionBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -344px -48px;
+}
+
+.HCObjectEditPanelHead .toolbar .optionLink,
+.HCObjectEditPanelHead .toolbar .permaLink {
+	color: #000;
+	text-decoration: underline;
+	cursor: pointer;
+	font-weight:bold;
+display:none;
+}
+.HCObjectEditPanelHead .extDate,
+.HCObjectEditPanelItem .extDate {
+	margin-left: 3px;
+	display: none;
+}
+*/
+.HCObjectEditPanelBody {
+	background: #FFF;
+}
+.contentPanel {
+	height: 100%;
+	position: absolute;
+}
+.contentPanel h6 {
+	color: #8D8D8D;
+	font-size: 16px;
+	line-height: 24px;
+	height: 24px;
+	margin: 0px 10px;
+	clear: both;
+}
+.contentPanel .formItem {
+	height: 28px;
+	padding: 5px 10px;
+}
+.contentPanel label {
+	display: none;
+}
+.contentPanel .formField {
+	position: relative;
+	top: -24px;
+	width: 100%;
+}
+.contentPanel .formPromptText {
+	color: #CCC;
+	font-size: 16px;
+	line-height: 18px;
+	height: 18px;
+	overflow: hidden;
+	padding: 5px 2px 0;
+	position: absolute;
+	text-align: left;
+	white-space: nowrap;
+}
+.contentPanel input {
+	position: relative;
+	border: 0px;
+	border-bottom: 1px solid #666;
+	color: #666;
+	height: 21px;
+	line-height: 18px;
+	font-size: 16px;
+	background: transparent;
+	padding: 3px 0px 0px;
+	width: 100%;
+}
+.contentPanel input:focus {
+	border-color: #000;
+}
+
+#HCContentForm {
+	height: 100%;
+}
+#HCDescription {
+	background: #E6E6E6; 
+	border: 1px solid #CFCFCF; 
+	margin-top: 5px;
+	padding: 10px;
+}
+#HCUploadTarget {
+	display: none;
+}
+#HCKMLFile, #HCMediaFile {
+	z-index:100;
+	opacity: 0;
+	position: relative;
+	margin: -10px 0 0 -200px;
+}
+.uploadKmlBtn, .uploadMediaBtn {
+	font-size: 14px;
+	font-weight: bold;
+	height: 22px;
+	width: 222px;
+	padding-top: 6px;
+	text-align: center;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+	background: #E7E7E7;
+	color: #000;
+	cursor: pointer;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+
+	border: 1px solid;
+	border-top-color: #ccc;
+	border-left-color: #ccc;
+	border-right-color: #bbb;
+	border-bottom-color: #bbb;
+}
+.uploadKmlBtn.hover,
+.uploadMediaBtn.hover {
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+	background: #FED274;
+}
+.previewFile.disabled,
+.uploadKmlBtn.disabled,
+.uploadMediaBtn.disabled {
+	cursor: default;
+	color: #CCC;
+}
+.HCFeedbackBox {
+	background: #FFF;
+	height: 28px;
+	line-height: 28px;
+	margin: 5px 10px;
+	overflow: hidden;
+	color: #8D8D8D;
+	white-space: nowrap;
+}
+.HCFeedbackBox.error {
+	color: #FF4040;
+}
+.previewItem .previewFileTool {
+	background: #FFF;
+	position: absolute;
+	float: right;
+	padding-left: 5px;
+	right: 10px;
+	margin-top: -1px;
+}
+.previewItem .previewFile,
+.previewItem .removeFile {
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: underline;
+}
+.previewItem .previewFile:hover {
+	color: #00a000;
+}
+.previewItem .previewFile.disabled:hover {
+	color: #CCC;
+}
+.previewItem .removeFile:hover {
+	color: #a00000;
+}
+
+.baseMapPanel,
+.objectPanel,
+.settingPanel,
+.privilegePanel,
+.bookPanel {
+	height: 100%;
+	display: none;
+	position: absolute;
+	color: #000000;
+}
+
+.webServiceMap {
+	height: 24px;
+	border: 1px solid #666;
+	margin-top: 2px;
+	padding:0px;
+}
+.addwsMap {
+	height: 24px;
+	width: 24px;
+	font-weight: bold;
+	background: #ccc;
+	float: right;
+	position: fixed;
+	font-size: 18px;
+	text-align: center;
+	color: #666;
+	cursor: pointer;
+	right: 8px;
+}
+#HCMapUrl {
+	width: 100%;
+	height: 24px;
+	position: relative;
+	float: left;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+#HCBookSearchKey {
+	margin: 0 20px 0px 10px;
+	width: 50%;
+}
+#isAPlace {
+	margin: 0 5px;
+}
+.objectPanel{
+	background: #232323;
+}
+.bookPanel h6,
+.settingPanel h6 {
+	color: #8D8D8D;
+	font-size: 16px;
+	line-height: 24px;
+	height: 24px;
+	margin: 0px 10px;
+	clear: both;
+}
+.privilegePanel h6 {
+	color: #8D8D8D;
+	font-size: 16px;
+	line-height: 24px;
+	height: 24px;
+	margin: 0px 10px;
+	clear: both;
+}
+.privilegePanel .coauthorItem {
+	height: 18px;
+	line-height: 18px;
+	overflow: hidden;
+	padding: 4px 0px 0px 3px;
+	border: 1px solid #ccc;
+	margin: 2px 2px 2px 0;
+	padding: 1px;
+}
+.privilegePanel .coauthorItem strong {
+	color: #4F1414;
+	float: left;
+}
+.privilegePanel .coauthorItem span {
+	color: #333;
+	cursor: default;
+	display: block;
+	left: 5px;
+	overflow: hidden;
+	position: relative;
+	padding-right: 5px;
+}
+.privilegePanel .coauthorItem:hover {
+	background: #ffefc0;
+}
+.privilegePanel .removeCoauthor {
+	background: transparent url('../images/close.gif') no-repeat scroll 0 -24px;
+	height: 12px;
+	width: 12px;
+	float: right;
+	position: relative;
+	top: 4px;
+	right: 5px;
+	z-index: 99;
+	cursor: pointer;
+}
+
+.currentBaseMap {
+	border: 2px dashed #888;
+	min-height: 50px;
+}
+.currentBaseMap .removeBaseMap {
+	background: transparent url('../images/close.gif') no-repeat scroll 0 -24px;
+	height: 12px;
+	width: 12px;
+	float: right;
+	position: relative;
+	top: 4px;
+	right: 5px;
+	z-index: 99;
+	cursor: pointer;
+}
+.currentBaseMap .mapToolBtn {
+	background: transparent url("../images/HCIcons3.png") no-repeat scroll -78px -74px;
+	height: 13px;
+	width: 13px;
+	float: right;
+	position: relative;
+	top: 3px;
+	right: 5px;
+	z-index: 99;
+	cursor: pointer;
+	opacity: 0.7;
+}
+.currentBaseMap .mapToolBtn:hover {
+	opacity: 1.0;
+}
+.currentBaseMap .mapToolBtn.close {
+	background: transparent url("../images/HCIcons3.png") no-repeat scroll -96px -74px;
+}
+.baseMapPanel .mapToolBox {
+	display:none;
+	width: 150px;
+	height: 45px;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 3px #777777;
+	z-index: 100;
+	position: fixed;
+	background: #fff;
+	right: 14px;
+	padding: 5px;
+}
+
+.mapToolBox .removeBaseMap {
+	position: relative;
+	width: 130px;
+	cursor: pointer;
+	top: 5px;
+	left: 1px;
+}
+.mapToolBox .removeBaseMap:hover {
+	color: #000;
+}
+.baseMapOC {
+	background: transparent url('../images/opacitySlider.png') no-repeat scroll -12px 0;
+	width: 57px;
+	height: 20px;
+	position: absolute;
+	left: 70px;
+	top: 2px;
+	margin-bottom: 5px;
+}
+.bookList,
+.baseMapList {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.bookList {
+	padding: 10px;
+}
+
+.bookList .bookItem,
+.baseMapList .mapItem {
+	border: 1px solid #ccc;
+	margin: 2px 2px 2px 0;
+	padding: 1px;
+}
+.bookList .bookItem:hover,
+.baseMapList .mapItem:hover {
+	background: #ffefc0;
+}
+.bookList .bookItem strong {
+	color: #ee9f3b;
+	padding: 0 5px;
+	overflow-x: hidden;
+	cursor: default;
+}
+.bookList .bookItem span {
+	padding-left:25px;
+	color: #666;
+	font-size: 12px;
+	overflow-x: hidden;
+	cursor: default;
+}
+
+.baseMapList .mapItem strong {
+	color: #ee9f3b;
+	float: left;
+}
+.baseMapList .mapItem span {
+	color: #AAA;
+	cursor: default;
+	display: block;
+	left: 5px;
+	overflow: hidden;
+	position: relative;
+	padding-right: 5px;
+}
+.currentBaseMap .mapItem {
+	height: 18px;
+	line-height: 18px;
+	overflow: hidden;
+	padding: 4px 0px 0px 3px;
+}
+.currentBaseMap .mapItem strong {
+	color: #4F1414;
+	float: left;
+}
+.currentBaseMap .mapItem span {
+	color: #333;
+	cursor: default;
+	display: block;
+	left: 5px;
+	overflow: hidden;
+	position: relative;
+	padding-right: 5px;
+}
+.currentBook {
+	padding: 10px;
+}
+.currentBook .pageNum {
+	position: relative;
+	float: right;
+	right: 5px;
+	top: -5px;
+	font-size: 10pt;
+	color: #777;
+}
+.currentBook .bookCover {
+	width: 60px;
+	height: 80px;
+	position: relative;
+	float:left;
+}
+.currentBook .bookCover .closeBtn {
+	background: url("../images/HCIcons3.png") no-repeat scroll -162px -48px transparent;
+	position: absolute;
+	left: -11px;
+	top: -5px;
+	display: none;
+}
+.currentBook .bookCover img {
+	height: 80px;
+	width: 55px;
+	border: 1px solid #666;
+}
+
+.mediaPanel {
+	float: right;
+	position: fixed;
+	min-height:30px;
+	right: 7px;
+	z-index: 1000;
+	width: 250px;
+	border: 2px solid #FFB000;
+	background: #FAFAFA;
+	display: none;
+	padding: 0px;
+}
+.mediaPanel .HCFeedbackBox {
+	background: #FAFAFA;
+}
+.mediaPanelContent {
+	padding: 5px;
+}
+.mediaPanelContent .formPromptText {
+	padding: 5px 1px 0;
+}
+.imageHelp,
+.kmlHelp {
+	color: #8d8d8d;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 13px;
+	margin-left: 5px;
+	text-decoration: none;
+	position: absolute;
+	top: 10px;
+	right: 5px;
+}
+.kmlHelp {
+	top: 4px;
+}
+.imageHelp:hover,
+.kmlHelp:hover {
+	color: #00C;
+}
+
+.HCObjectEditPanel .block {
+	position: fixed;
+	z-index: 999;
+	background: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	top: 0px;
+	right: 0px;
+	display: none;
+}
+.HCObjectEditPanel .loading {
+	text-align: center;
+	position: relative;
+	clear: both;
+}
+.HCObjectEditPanelHead .loading {
+	top: 0px;
+}
+.HCObjectEditPanelBody .loading {
+	height: 40px;
+	margin: 2px 0;
+	padding-top:25px;
+}
+.HCObjectEditPanel .cancelBtn,
+.HCObjectEditPanel .insertBtn,
+.HCObjectEditPanel .addBtn,
+.HCObjectEditPanel .sendPwdBtn,
+.HCObjectEditPanel .previewBtn,
+.HCObjectEditPanel .saveBtn {
+	display: inline-block;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px; 
+
+	float: right; 
+	margin: 0px 10px;
+	padding: 4px 6px;
+	.padding-bottom: 4px; /* IE hack to fix spacing issue. */
+
+	text-decoration: none;
+	text-align: center;
+
+	background: #E7E7E7;
+	color: black;
+	cursor: pointer;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+
+	border: 1px solid;
+	border-top-color: #ccc;
+	border-left-color: #ccc;
+	border-right-color: #bbb;
+	border-bottom-color: #bbb;
+}
+.HCObjectEditPanel .saveBtn {
+	margin-left: 0px;
+	position: absolute;
+	right: 0px;
+	top: 8px;
+}
+.HCObjectEditPanel .saveBtn.disabled,
+.HCObjectEditPanel .addBtn.disabled,
+.HCObjectEditPanel .sendPwdBtn.disabled,
+.HCObjectEditPanel .previewBtn.disabled {
+	cursor: default;
+	color: #CCC;
+}
+.HCObjectEditPanel .previewBtn.disabled:hover {
+	background: #E7E7E7;
+}
+.HCObjectEditPanel .addBtn,
+.HCObjectEditPanel .sendPwdBtn,
+.HCObjectEditPanel .insertBtn,
+.HCObjectEditPanel .previewBtn {
+	top: 0px;
+	float: left;
+	position: relative;
+	width: 210px;
+	margin-bottom: 30px;
+}
+.HCObjectEditPanel .sendPwdBtn,
+.HCObjectEditPanel .addBtn {
+	margin-bottom: 10px;
+}
+.HCObjectEditPanel .sendPwdBtn.disabled:hover,
+.HCObjectEditPanel .addBtn.disabled:hover {
+	background: #E7E7E7;
+}
+.HCObjectEditPanel .cancelBtn:hover,
+.HCObjectEditPanel .addBtn:hover,
+.HCObjectEditPanel .sendPwdBtn.:hover,
+.HCObjectEditPanel .insertBtn:hover,
+.HCObjectEditPanel .previewBtn:hover {
+	background: #FED274;
+}
+.HCObjectEditPanel .cancelBtn {
+	position: fixed;
+	right: 13px;
+}
+.HCObjectEditPanel .gripBtn {
+	background: transparent url('../images/grippy.png') repeat-y scroll 0px 1px;
+	width: 8px;
+	height: 42px;
+	position: relative;
+	cursor: move;
+	z-index: 99;
+	float: left;
+	margin: -5px 5px 0 -5px;
+	display: none;
+}
+.HCObjectEditPanel .closeBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -162px -48px;
+	width: 22px;
+	height: 22px;
+	margin: 0px;
+	position: relative;
+	cursor: pointer;
+	z-index: 99;
+	float: right;
+	margin: 0 0 5px 5px;
+}
+.HCObjectEditPanel .closeBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -188px -48px;
+}
+.HCObjectEditPanel .centerBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -110px -48px;
+	width: 22px;
+	height: 22px;
+	margin: 0px;
+	position: relative;
+	cursor: pointer;
+	z-index: 99;
+	float: right;
+	margin: 0 0 5px 5px;
+}
+.HCObjectEditPanel .centerBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -136px -48px;
+}
+.HCObjectEditPanel .expandBtn {
+	background: #000000;
+	width: 9px;
+	height: 60px;
+	right: 6px;
+	position: relative;
+	float: right;
+	cursor: pointer;
+	z-index: 99;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	opacity: 0.4;
+	font-weight: bold;
+	color: #fff;
+	margin: 0 0 5px 16px; 
+	padding: 0 0 0 2px;
+	line-height: 60px;
+}
+.HCObjectEditPanel .listView .expandBtn {
+	height: 32px;
+	line-height: 32px;
+}
+.HCObjectEditPanel .expandBtn:hover {
+	width: 19px;
+	right: 2px;
+	padding-left: 0px;
+	margin-left: 8px;
+	font-size: 22px;
+}
+.HCObjectEditPanelHead .deleteBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -318px -48px;
+	width: 22px;
+	height: 22px;
+	margin: 0 -2px 0 5px;
+	position: relative;
+	cursor: pointer;
+	z-index: 99;
+	float: right !important;
+}
+.HCObjectEditPanelHead .deleteBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -344px -48px;
+}
+.HCObjectEditPanel .overlayBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -422px -48px;
+	width: 22px;
+	height: 22px;
+	margin: 0 0 0 5px;
+	position: relative;
+	cursor: pointer;
+	z-index: 99;
+	float: right;
+}
+.HCObjectEditPanel .overlayBtn:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -448px -48px;
+}
+.HCObjectEditPanel .overlayBtn.selected {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -370px -48px;
+}
+.HCObjectEditPanel .overlayBtn.selected:hover {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -396px -48px;
+}
+.HCObjectEditPanelItem .HCNarrativeMetadata,
+.HCObjectEditPanelItem .HCNarrativeContent {
+	display:none;
+}
+
+/* CSS for panel footer */
+.HCObjectEditPanelFooter {
+	background: #FFF;
+	color: #333;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 30px;
+	padding: 8px 0px 5px;
+}
+.HCObjectEditPanelFooter p {
+	margin: 7px 10px 25px;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: normal;
+}
+.HCObjectEditPanelFooter .collectionBox {
+	display: inline-block;
+	border: 1px solid #777;
+	padding: 0px 20px 0px 10px;
+	/* width: 130px; */
+	width: 50% !important;
+	cursor: default;
+}
+.HCObjectEditPanelFooter .collectionBtn {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -96px -74px;
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+	position: relative;
+	left: -17px;
+}
+.HCObjectEditPanelFooter .collectionBtn.close {
+	background: transparent url('../images/HCIcons3.png') no-repeat scroll -78px -74px;
+}
+/* CSS for Collection Selection Panel */
+.HCObjectEditPanelFooter .HCCollectionPanel {
+	display: none;
+	position: absolute;
+	bottom: 30px;
+	left: 94px;
+	/* width: 165px; */
+	width: 60% !important; 
+	/* height: 206px; */
+	height: 800% !important; 
+	padding: 0px;
+	border: 1px solid;
+	font-size: 12px;
+	background: #EFEFEF;
+	color: #818181;
+	overflow: hidden;
+	z-index: 999;
+	-moz-box-shadow: 1px 1px 3px #777;
+}
+.HCObjectEditPanelFooter .passwordPanel,
+.HCObjectEditPanelFooter .newCollectionPanel {
+	float: right;
+	position: fixed;
+	min-height:30px;
+	right: 7px;
+	z-index: 1000;
+	width: 250px;
+	border: 2px solid #FFB000;
+	background: #FAFAFA;
+	display: none;
+	padding: 0px;
+}
+.passwordPanelContent,
+.newCollectionPanelContent {
+	padding: 5px;
+}
+.passwordPanelContent .HCFeedbackBox,
+.newCollectionPanel .HCFeedbackBox {
+	background: #FAFAFA;
+}
+.passwordPanelContent h6,
+.newCollectionPanel h6 {
+	color: #8D8D8D;
+	font-size: 16px;
+	line-height: 24px;
+	height: 24px;
+	margin: 0px 10px;
+	clear: both;
+	padding-left: 2px;
+}
+.passwordPanelContent .formItem,
+.newCollectionPanel .formItem {
+	height: 40px;
+	padding: 5px 10px;
+}
+.passwordPanelContent label,
+.newCollectionPanel label {
+	display: block;
+	padding-left: 2px;
+}
+.passwordPanelContent .formField,
+.newCollectionPanel .formField {
+	position: relative;
+	top: -24px;
+	width: 100%;
+}
+.passwordPanelContent .formPromptText,
+.newCollectionPanel .formPromptText {
+	color: #CCC;
+	font-size: 16px;
+	line-height: 18px;
+	height: 18px;
+	overflow: hidden;
+	padding: 5px 2px 0;
+	position: absolute;
+	text-align: left;
+	white-space: nowrap;
+}
+.passwordPanelContent input,
+.newCollectionPanel input {
+	position: relative;
+	border: 0px;
+	border-bottom: 1px solid #666;
+	color: #666;
+	height: 21px;
+	line-height: 18px;
+	font-size: 16px;
+	background: transparent;
+	padding: 3px 0px 0px;
+	width: 100%;
+}
+.passwordPanelContent input:focus,
+.newCollectionPanel input:focus {
+	border-color: #000;
+}
+
+.HCCollectionPanel .searchBox {
+	position: absolute;
+	border: 1px solid #CCC;
+	margin: 3px;
+	/* width: 140px; */
+	width: 90% !important;
+	bottom: 0px;
+	background: white url("../images/searchglass.png") no-repeat scroll 3px 4px;
+	padding-left: 17px;
+}
+.HCCollectionPanel .newCollectionBtn {
+	border-bottom: 1px solid #CCC;
+	cursor:default;
+	line-height: 21px;
+	padding-left: 10px;
+}
+.HCCollectionPanel .newCollectionBtn:hover {
+	background: #FFE084;
+}
+.HCCollectionPanel .myCollections {
+	position: absolute;
+	width: 100%; /*changed from 100%; to 300%; by youlu*/
+	height: 260px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.HCCollectionPanel .otherCollections {
+	width: 100%;
+	height: 80px;
+	bottom: 25px;
+	border-top: 1px solid;
+	display:none;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative;
+	top: 80px;
+}
+.HCCollectionPanel .collectionItem,
+.HCCollectionPanel .collectionPrompt {
+	padding-left: 5px;
+	padding-bottom: 2px;
+	height: 18px;
+	line-height: 20px;
+	overflow: hidden;
+	cursor: default;
+	white-space: nowrap;
+}
+.HCCollectionPanel .collectionItem:hover {
+	background: #FFE084;
+}
+.HCCollectionPanel .collectionItem b {
+	color: #000;
+}
+.HCCollectionPanel .collectionPrompt {
+	padding: 0px;
+	text-align: center;
+	line-height: 80px;
+	height: 80px;
+	font-weight: bold;
+}
+.HCCollectionPanel .checkBox {
+	margin-top: 5px;
+	vertical-align: top;
+}
+/* CSS for timespan Field */
+#HCTimeField {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	top: -23px;
+	width: 100%;
+	max-height: 28px;
+	white-space: nowrap;
+}
+#HCTimeField input {
+	width: 106px;
+	top: -1px;
+	font-size: 14px;
+	padding-left: 1px;
+	height: 19px;
+}
+#HCTimeField snap {
+	color: #CCC;
+	font-size: 16px;
+	line-height: 27px;
+}
+
+/* CSS for license Field */
+#HCLicenseField {
+	position: relative;
+	display: inline-block;
+	top: -17px;
+	width: 100%;
+	max-height: 28px;
+}
+.changeLicense, .licenseHelp {
+	color: #CCC;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 13px;
+	margin-left: 5px;
+	vertical-align: top;
+	text-decoration: underline;
+}
+.licenseHelp {
+	position: relative;
+	float: right;
+}
+.changeLicense:hover, .licenseHelp:hover {
+	color: #FFF;
+}
+
+/* CSS for license choose panel */
+.HCLicensePanel {
+	display:none;
+	position: absolute;
+	left: 81px;
+	z-index: 100;
+	width: 240px;
+	background: #EFEFEF;
+	border: 1px solid;
+	margin-top: -24px;
+	-moz-box-shadow: 1px 1px 3px #777;
+}
+.HCLicenseType {
+	cursor: pointer;
+}
+.HCLicenseType:hover {
+	background: #FFE084;
+}
+.HCLicenseType.selected {
+	background: #6F6F6F;
+	color: #FFF;
+}
+.HCLicenseType img {
+	margin: 3px 5px 3px 3px;
+	vertical-align: middle;
+}
+
+#bookViewer {
+	right:110px;
+	position:absolute;
+	height:400px;
+	width: 300px;
+	display:none;
+	z-index: 999;
+	background: #fff;
+	top: 100px
+}

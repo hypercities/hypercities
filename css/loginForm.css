@@ -1,0 +1,280 @@
+/**
+ * HyperCities Login Form CSS
+ *
+ * @author    HyperCities Tech Team
+ * @copyright Copyright 2009, The Regents of the University of California
+ * @date      2008-01-01
+ * @version   0.1
+ * @description CSS for login and registration forms
+ *
+ */
+
+/* general class*/
+.collectionPanel{
+	padding: 5px;
+	border: 1px solid gainsboro;
+	background: whitesmoke;
+	color: #818181;
+	height: 350px;
+	width: 250px;
+	font-size: 12px;
+	overflow: scroll;
+	float: left;
+}
+
+.infoWinTitle {
+	font-size: 14px;
+	color: #DB9132;
+	padding: 2px;
+	font-weight:bold;
+}
+
+.HCBottomBar{
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  text-align:right;       
+}
+.HCBottomBar a
+{
+  color: #818181;    
+  font-size:12px;
+  margin-right: 10px;
+}
+.HCBottomBar input
+{
+    padding-left: 5px;    
+}
+
+.tooltip {
+	float: right;
+	position:relative;
+	background: transparent url('../images/info.png') no-repeat scroll 0 0;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+.tooltip div {
+	display:none;
+	padding:2px 3px;
+	margin-left:8px;
+	width:130px;
+}
+.tooltip:hover div{
+	display:inline;
+	position:absolute;
+	background:#ffffcc; no-repeat scroll 0 0;
+	border:1px solid #cccccc;
+	color:#6c6c6c;
+	right:20px;
+	z-index:999;
+}
+
+/* Login Form CSS */
+#loginForm {
+    text-align: left;
+    padding: 10px 15px;
+    height: 150px;
+}
+#loginForm a {
+    color: #8D8D8D;
+    text-decoration: none;
+    font-weight: bold;
+}
+#loginForm a:hover {
+    color: #FFA93A;
+}
+#loginForm .formItem {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    padding-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ccc;
+    float:none;
+}
+#loginForm .formItem .userPhoto {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    float: left;
+    margin: 5px;
+}
+#loginForm .formItem .textbox {
+    font-size: 13px;
+    font-weight: bold;
+    width: 174px;
+    padding: 0 3px 1px 2px;
+    border: 1px solid #666;
+    background: #444;
+    color: #ccc;
+}
+#loginForm .subItem {
+    width: auto;
+    padding: 7px 3px 1px 2px;
+    margin: 2px 2px 2px 2px;
+    text-align: left;
+}
+#loginForm .formItem b {
+    font-size: 9px;
+    line-height: 11px;
+    position: relative;
+    top: -8px;
+    left: -1px;
+}
+#loginBtn, #logoutBtn {
+    cursor: pointer;
+    position: relative;
+    top: -1px;
+    border-color: #ccc #777 #777 #ccc;
+    border-width: 1px;
+    border-style: solid;
+    background: #666;
+    font-weight: bold;
+    color: #ccc;
+    float: right;
+}
+#loginBtn:hover {
+    color: #fff;
+}
+#forgotBtn {
+    float: right;
+    text-align: left;
+    position: relative;
+	bottom: 2px;
+    font-size: 13px;
+}
+
+#loginForm #openIdLogin{
+    float: right;
+    text-align: left;
+    position: relative;
+    bottom: 2px;
+    font-size: 13px;
+	//display: none;
+}
+
+#loginErrorBox {
+    width: 280px;
+    height: 48px;
+    border: 2px solid #E00000;
+    background: #FFF0FB;
+    color: #A00000;
+    position: absolute;
+    float: left;
+    left: -260px;
+    top: 61px;
+    padding: 5px;
+    z-index: 100;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    opacity: 0.8;
+}
+#loginErrorBox a {
+    color: #A00000;
+    text-decoration: underline;
+}
+#loginErrorBox a:hover {
+    color: #F00000;
+}
+#closeErrorBox {
+    background: transparent url('../images/close.gif') no-repeat scroll 0 0;
+    width: 12px;
+    height: 12px;
+    margin-left: 30px;
+    position: relative;
+    float: right;
+    cursor: pointer; 
+}
+#errorBoxTip {
+    background: transparent url('../images/tipRight.gif') no-repeat scroll 0 0;
+    width: 20px;
+    height: 23px;
+    float: right;
+    position: relative;
+    right: -24px;
+    top: -35px;
+}
+
+
+/* end of general class*/
+
+/* Update collection info window*/
+.HCUpdateColDiv {
+	height: 380px;
+	width: 400px;
+}
+
+.HCUpdateColDiv .form-item{
+	border-bottom: 1px dashed gainsboro;
+	clear: left;
+	padding: 2px;
+}
+
+.HCUpdateColDiv label {
+	float:left;
+	font-weight:bold;
+	height:20px;
+	line-height:25px;
+	width:100px;
+	text-align:right;
+	margin-right: 20px;
+	font-size: 14px;
+	color: #DB9132;
+
+}
+
+.HCUpdateColDiv #other_collections{
+  padding: 5px;
+  color: #818181;
+  border: 1px solid gainsboro;
+  background: whitesmoke;
+  font-size: 12px;
+  height: 250px;
+  overflow: auto;
+}
+
+/* end of update collection info window*/
+
+/* Manage my collections*/
+#leftPane{
+	padding: 10px;
+	float: left;
+	width: 250px;
+}
+
+#rightPane{
+	padding: 10px;
+	float: left;
+	width: 250px;
+}
+
+#middlePane{
+	float:left;
+	height:400px
+}
+
+#addToMy{
+	position:relative;
+	top:150px;
+	left:5px
+}
+
+#addToOther{
+	position:relative;
+	top:150px;
+	left:5px
+}
+
+
+.manageMyColInfo{
+    background: transparent url('../images/info.png') no-repeat scroll 0 -16px;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+/* end of Manage my collections*/
+
+

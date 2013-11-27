@@ -1,0 +1,44 @@
+#ds .o1 {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";   /* For IE 8 */
+    filter: alpha(opacity=20);                                          /* For IE 7 */
+}
+#ds .o2 {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=16)";
+    filter: alpha(opacity=16);
+}
+#ds .o3 {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=12)";
+    filter: alpha(opacity=12);
+}
+#ds .o4 {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=8)";
+    filter: alpha(opacity=8);
+}
+#ds .o5 {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=4)";
+    filter: alpha(opacity=4);
+}
+#GInfoBackground{
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    filter: alpha(opacity=75);
+}
+.topTab {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+}
+#topTab .highlight {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+}
+.intelliTab {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+}
+#intelliTab .highlight {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+}
+#loadingMessage {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+}

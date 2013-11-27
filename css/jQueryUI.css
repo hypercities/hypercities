@@ -1,0 +1,47 @@
+.ui-resizable-w { 
+    cursor: w-resize;
+    position: absolute;
+    width: 6px; 
+    left: 0px; 
+    top: 0px; 
+    height: 100%; 
+    background: #232323 url('../images/sideBarGrab.gif') no-repeat scroll 2px 32px; 
+}
+.ui-resizable-w:hover {
+    background: #232323 url('../images/sideBarGrab.gif') repeat-y scroll 2px 0px; 
+}
+.ui-resizable-handle.dark {
+    background-color: #232323 !important;
+}
+.ui-resizable-handle.light {
+    background-color: #AFAFAF !important;
+}
+
+.proxy {
+    opacity: 0.8;
+}
+.intelliOC .ui-slider-handle,
+.baseMapOC .ui-slider-handle{
+    background: transparent url('../images/opacitySlider.png') no-repeat scroll 0 0; 
+    height: 15px;
+    width: 10px;
+    position: absolute;
+    top: 5px; 
+}
+
+#GTCSlider .ui-slider-handle {
+    background: transparent url('../images/TCHandle.png') no-repeat scroll 0 0;
+    height: 25px;
+    width: 10px;
+    position: absolute;
+    margin-left: 90px;
+    z-index: 99;
+}
+#GTCSlider .ui-slider-range {
+    background: #fff;
+    opacity: 0.5;
+    margin-left: 90px;
+    height: 16px;
+    position: absolute;
+    top: 4px;
+}
