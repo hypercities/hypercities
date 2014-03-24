@@ -95,10 +95,10 @@ if ($baseCollection) {
             isBase: false
           };
         <?php
-        if ($baseCollection && $baseCollectionAuthenticated) {?>
+        if ($baseCollection && $baseCollectionAuthenticated) { ?>
           initOpts.permalink.isBase = true;
           initOpts.permalink.view = 'intelliList';
-      <?}
+      <?php }
         cServerSession::unsetVar('permalink');
       }
       
