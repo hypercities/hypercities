@@ -326,6 +326,7 @@ CREATE TABLE IF NOT EXISTS `object_mappings` (
   `object_id` int(11) NOT NULL,
   `object_state_id` int(11) NOT NULL,
   `marker_style_id` int(11) NOT NULL,
+  `marker_state_id` int(11) NOT NULL DEFAULT 0,
   `kml` text NOT NULL,
   `ne_lat` decimal(11,8) DEFAULT '90.00000000',
   `ne_lon` decimal(11,8) DEFAULT '180.00000000',
@@ -337,6 +338,8 @@ CREATE TABLE IF NOT EXISTS `object_mappings` (
   `date_to` datetime NOT NULL DEFAULT '9999-12-31 23:59:59',
   `dateTo_isBC` tinyint(1) NOT NULL DEFAULT '0',
   `basemap_id` int(11) NULL DEFAULT NULL,
+  `zoom` tinyint(4) NOT NULL DEFAULT 14,
+  `max_zoom` int(11) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
@@ -354,6 +357,35 @@ INSERT INTO `object_mappings` (`id`, `object_id`, `object_state_id`, `marker_sty
 
 -- --------------------------------------------------------
 
+
+-- 
+-- Table structure for table `object_mappings_geo_references`
+-- 
+
+CREATE TABLE IF NOT EXISTS `object_mappings_geo_references` (
+  `object_mapping_id` int(11) NOT NULL,
+  `geo_reference_id` int(11) NOT NULL,
+  KEY `object_mapping_id` (`object_mapping_id`,`geo_reference_id`),
+  KEY `geo_reference_id` (`geo_reference_id`),
+  KEY `object_mapping_id_2` (`object_mapping_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+--
+-- Table structure for table `geo_references`
+--
+
+CREATE TABLE IF NOT EXISTS `geo_references` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `latitude` decimal(11,8) NOT NULL,
+  `longitude` decimal(11,8) NOT NULL,
+  `altitude` decimal(14,8) NOT NULL,
+  `order` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `latitude` (`latitude`),
+  KEY `longitude` (`longitude`),
+  KEY `altitude` (`altitude`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=715835 ;
 
 
 --
