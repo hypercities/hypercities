@@ -194,6 +194,7 @@ CREATE TABLE IF NOT EXISTS `map_profiles` (
   `tile_url` varchar(255) NOT NULL,
   `max_zoom_level` int(11) NOT NULL,
   `min_zoom_level` int(11) NOT NULL,
+  `projection` varchar(15) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
