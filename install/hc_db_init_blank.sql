@@ -336,6 +336,7 @@ CREATE TABLE IF NOT EXISTS `object_mappings` (
   `dateFrom_isBC` tinyint(1) NOT NULL DEFAULT '0',
   `date_to` datetime NOT NULL DEFAULT '9999-12-31 23:59:59',
   `dateTo_isBC` tinyint(1) NOT NULL DEFAULT '0',
+  `basemap_id` int(11) NULL DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
