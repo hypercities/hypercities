@@ -109,6 +109,35 @@ INSERT INTO `access_rights` (`id`, `access_right`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `books`
+--
+
+CREATE TABLE IF NOT EXISTS `books` (
+  `book_id` varchar(255) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `cover_url` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`book_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Table structure for table `book_objects`
+--
+
+CREATE TABLE IF NOT EXISTS `book_objects` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `book_id` varchar(255) NOT NULL,
+  `object_id` int(11) NOT NULL,
+  `page_no` char(27) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_object_id` (`object_id`),
+  KEY `FK_book_id` (`book_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+
+--
 -- Table structure for table `cities`
 --
 
@@ -124,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `cities` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 
 -- --------------------------------------------------------
@@ -139,7 +168,7 @@ CREATE TABLE IF NOT EXISTS `contents` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=67678 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 
 -- --------------------------------------------------------
@@ -158,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `geo_references` (
   KEY `latitude` (`latitude`),
   KEY `longitude` (`longitude`),
   KEY `altitude` (`altitude`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=715835 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 
 -- --------------------------------------------------------
@@ -199,7 +228,7 @@ CREATE TABLE IF NOT EXISTS `maps` (
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_city_id` (`city_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=514 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 
 -- --------------------------------------------------------
@@ -236,7 +265,7 @@ CREATE TABLE IF NOT EXISTS `map_legends` (
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_map_id` (`map_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ;
 
 -- --------------------------------------------------------
 
@@ -260,7 +289,7 @@ CREATE TABLE IF NOT EXISTS `map_profiles` (
   KEY `FK_tile_type_id` (`tile_type_id`),
   KEY `FK_map_id` (`map_id`),
   KEY `FK_map_state_id` (`map_state_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=506 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 
 -- --------------------------------------------------------
@@ -273,7 +302,7 @@ CREATE TABLE IF NOT EXISTS `map_states` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `state` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 --
 -- Dumping data for table `map_states`
@@ -295,7 +324,7 @@ CREATE TABLE IF NOT EXISTS `marker_state` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `is_hidden` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ;
 
 -- --------------------------------------------------------
 
@@ -307,7 +336,7 @@ CREATE TABLE IF NOT EXISTS `marker_styles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 --
 -- Dumping data for table `marker_styles`
@@ -353,7 +382,7 @@ CREATE TABLE IF NOT EXISTS `objects` (
   KEY `FK_description_id` (`content_id`),
   KEY `external_permissions_id` (`external_permissions_id`),
   KEY `FK_object_state_id` (`object_state_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=85349 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 INSERT INTO `objects` (`title`, `object_type_id`, `object_state_id`, `description`, `content_id`, `creator`, `copyright`, `owner_id`, `password`, `created_at`, `updated_at`) VALUES
 ('My Collections', 2, 1, 'These are my collections', NULL, 'HyperCities Admin', '', 1, NULL, '2010-02-18 02:23:34', '2010-02-18 02:23:34');
@@ -377,7 +406,7 @@ CREATE TABLE IF NOT EXISTS `objects_maps` (
   `map_data` text NOT NULL,
   `tile_type_id` bigint(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2394 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 
 -- --------------------------------------------------------
@@ -393,7 +422,7 @@ CREATE TABLE IF NOT EXISTS `objects_tags` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ;
 
 -- --------------------------------------------------------
 
@@ -449,7 +478,7 @@ CREATE TABLE IF NOT EXISTS `object_mappings` (
   KEY `ne_lon` (`ne_lon`),
   KEY `sw_lat` (`sw_lat`),
   KEY `sw_lon` (`sw_lon`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=87206 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 
 -- --------------------------------------------------------
@@ -498,7 +527,7 @@ CREATE TABLE IF NOT EXISTS `object_relations` (
   KEY `FK_owner_id` (`owner_id`),
   KEY `FK_description_id` (`content_id`),
   KEY `FK_scope_id` (`scope_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=129932 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 
 -- --------------------------------------------------------
@@ -511,7 +540,7 @@ CREATE TABLE IF NOT EXISTS `object_states` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `state` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 --
 -- Dumping data for table `object_states`
@@ -561,7 +590,7 @@ CREATE TABLE IF NOT EXISTS `privacy_levels` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `description` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 --
 -- Dumping data for table `privacy_levels`
@@ -584,7 +613,7 @@ CREATE TABLE IF NOT EXISTS `search_atoms` (
   `added_at` datetime NOT NULL,
   `last_searched_for` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=745 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 
 -- --------------------------------------------------------
@@ -599,7 +628,7 @@ CREATE TABLE IF NOT EXISTS `search_hits` (
   `object_id` int(11) NOT NULL,
   `weight` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ;
 
 -- --------------------------------------------------------
 
@@ -615,7 +644,7 @@ CREATE TABLE IF NOT EXISTS `tags` (
   `bounds` geometry DEFAULT NULL,
   PRIMARY KEY (`id`),
   FULLTEXT KEY `TAG` (`name`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ;
 
 -- --------------------------------------------------------
 
@@ -627,7 +656,7 @@ CREATE TABLE IF NOT EXISTS `tile_types` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `tile_method` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 --
 -- Dumping data for table `tile_types`
@@ -672,7 +701,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   KEY `FK_city_id` (`city_id`),
   KEY `FK_user_state_id` (`user_state_id`),
   KEY `FK_privacy_level_id` (`privacy_level_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1717 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 
 --
@@ -696,7 +725,7 @@ CREATE TABLE IF NOT EXISTS `users_files` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ;
 
 -- --------------------------------------------------------
 
@@ -712,7 +741,7 @@ CREATE TABLE IF NOT EXISTS `user_openids` (
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1482 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 
 -- --------------------------------------------------------
@@ -725,7 +754,7 @@ CREATE TABLE IF NOT EXISTS `user_states` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `state` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 --
 -- Dumping data for table `user_states`
