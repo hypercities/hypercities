@@ -32,9 +32,9 @@ HyperCities.linkController = function () {
         if (window.location.hash.toString().indexOf("#width=") > -1) return;
 		if (window.location.search.toString().indexOf("?link=") > -1) return;
 	
+        if ($.inArray(window.location.hash, _systemHashes) != -1) return;
         if (_lastHash == "" && window.location.search != "" && _lastSearch != window.location.search.toString().substr(1)) {
             // Do not parse hashes intended for other parts of the application.
-            if ($.inArray(window.location.hash, _systemHashes) != -1) return;
             _lastHash = window.location.search.toString().substr(1);
 			_lastSearch = window.location.search.toString().substr(1);
             HyperCities.debug (_id + "Found permalink");
