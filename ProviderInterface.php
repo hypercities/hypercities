@@ -56,10 +56,7 @@ require_once $versionBase . 'authentication/AuthenticationManager.inc';
 require_once $versionBase . 'authentication/Exceptions.inc';
 require_once $versionBase . 'authentication/Messages.inc';
 require_once $versionBase . 'authentication/User.inc';
-require_once $versionBase . 'authentication/Encryptor.php';
 require_once $versionBase . 'authentication/PermissionSet.inc';
-require_once $versionBase . 'authentication/PermissionsController.inc';
-require_once $versionBase . 'authentication/MoodlePermissionsController.inc';
 
 require_once $versionBase . 'database_models/SelectQuery.inc';
 require_once $versionBase . 'database_models/UpdateQuery.inc';
