@@ -101,6 +101,7 @@ function get_objects(Request $request) {
 		foreach ($result as $row) {
 			get_children($row, $criteria);
 		}
+    }
 	$datastore->loadAll();
 	$ms = MapStore::getInstance();
 	$ms->loadAll();

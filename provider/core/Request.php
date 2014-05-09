@@ -79,7 +79,7 @@ class Request implements \ArrayAccess {
 		}
 		// URL is of the form /collections or /objects and $_POST['action'] is set
 		// Determine action from actions
-		elseif ($url_components[0] == 'users' && count($url_components) >= 2
+		elseif ($url_components[0] == 'users' && count($url_components) >= 2) {
 			if (count($url_components) == 2) {
 				if (in_array($url_components[1], array("objects", "collections"))) $this->itemType = $url_components[1];
 				else $this->itemType = $url_components[0];
