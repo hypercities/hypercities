@@ -388,8 +388,7 @@ HyperCities.earth = function() {
     google.earth.addEventListener($placemark, 'mouseover', function($event) {
       // Define a custom icon.
       var icon = _GEarth.createIcon('');
-      //icon.setHref('../images/markerCity.png');
-      icon.setHref('http://linuxdev.ats.ucla.edu/~jay/devHC/branches/hypercitiesEarth/images/markerCity_over.png');
+      icon.setHref('./images/markerCity.png');
       $placemark.getStyleSelector().getIconStyle().setIcon(icon); //apply the icon to the style
     });
 
@@ -1720,8 +1719,7 @@ HyperCities.earth = function() {
 
           // Define a custom icon.
           var icon = _GEarth.createIcon('');
-          //icon.setHref('../images/markerCity.png');
-          icon.setHref('http://linuxdev.ats.ucla.edu/~jay/devHC/branches/hypercitiesEarth/images/markerCity.png');
+          icon.setHref('../images/markerCity.png');
 
           var style = _GEarth.createStyle(''); //create a new style
           style.getIconStyle().setIcon(icon); //apply the icon to the style
