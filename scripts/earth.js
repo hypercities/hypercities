@@ -176,10 +176,6 @@ HyperCities.earth = function() {
     // Enable GETimeControl
     var geTime = _GEarth.getTime();
     geTime.getControl().setVisibility(_GEarth.VISIBILITY_SHOW);
-    var timeSpan = _GEarth.createTimeSpan('GEarthTime');
-    timeSpan.getBegin().set("1700-01-01");
-    timeSpan.getEnd().set("2012-12-31");
-    geTime.setTimePrimitive(timeSpan);
 
     geTime.setHistoricalImageryEnabled(false);
 
@@ -373,7 +369,12 @@ HyperCities.earth = function() {
 			// which is initialized by HyperCities.linkController.init();
 			HyperCities.linkController.init();
 
-    } else {
+        var geTime = _GEarth.getTime();
+        var timeSpan = _GEarth.createTimeSpan('');
+        timeSpan.getBegin().set("1700-01-01");
+        timeSpan.getEnd().set(new Date().getFullYear() + "-12-31");
+        geTime.setTimePrimitive(timeSpan);
+} else {
       HyperCities.util.debug(_id + "Fail to create google earth instance.");
     }
   };
@@ -387,8 +388,7 @@ HyperCities.earth = function() {
     google.earth.addEventListener($placemark, 'mouseover', function($event) {
       // Define a custom icon.
       var icon = _GEarth.createIcon('');
-      //icon.setHref('../images/markerCity.png');
-      icon.setHref('http://linuxdev.ats.ucla.edu/~jay/devHC/branches/hypercitiesEarth/images/markerCity_over.png');
+      icon.setHref('./images/markerCity.png');
       $placemark.getStyleSelector().getIconStyle().setIcon(icon); //apply the icon to the style
     });
 
@@ -1719,8 +1719,7 @@ HyperCities.earth = function() {
 
           // Define a custom icon.
           var icon = _GEarth.createIcon('');
-          //icon.setHref('../images/markerCity.png');
-          icon.setHref('http://linuxdev.ats.ucla.edu/~jay/devHC/branches/hypercitiesEarth/images/markerCity.png');
+          icon.setHref('../images/markerCity.png');
 
           var style = _GEarth.createStyle(''); //create a new style
           style.getIconStyle().setIcon(icon); //apply the icon to the style
