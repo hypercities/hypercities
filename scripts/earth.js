@@ -176,10 +176,6 @@ HyperCities.earth = function() {
     // Enable GETimeControl
     var geTime = _GEarth.getTime();
     geTime.getControl().setVisibility(_GEarth.VISIBILITY_SHOW);
-    var timeSpan = _GEarth.createTimeSpan('GEarthTime');
-    timeSpan.getBegin().set("1700-01-01");
-    timeSpan.getEnd().set("2012-12-31");
-    geTime.setTimePrimitive(timeSpan);
 
     geTime.setHistoricalImageryEnabled(false);
 
@@ -373,7 +369,12 @@ HyperCities.earth = function() {
 			// which is initialized by HyperCities.linkController.init();
 			HyperCities.linkController.init();
 
-    } else {
+        var geTime = _GEarth.getTime();
+        var timeSpan = _GEarth.createTimeSpan('');
+        timeSpan.getBegin().set("1700-01-01");
+        timeSpan.getEnd().set(new Date().getFullYear() + "-12-31");
+        geTime.setTimePrimitive(timeSpan);
+} else {
       HyperCities.util.debug(_id + "Fail to create google earth instance.");
     }
   };
