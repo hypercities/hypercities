@@ -329,7 +329,6 @@ HyperCities.linkController = function () {
 			$itemType = "3d" + $itemType;
             _lastHash = $itemType + "/" + $itemId;
             window.location.hash = $itemType + "/" + $itemId;
-            }
         },
         
         clearURL : function () {
