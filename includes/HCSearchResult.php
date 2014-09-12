@@ -8,7 +8,7 @@
  * @date 2009-08-01
  * 
  */
-abstract class HCSearchResult implements IComparable {
+abstract class HCSearchResult {
     /**
      * Refers to the object.
      * @var mixed The object to which it refers
@@ -285,11 +285,4 @@ abstract class HCSearchResult implements IComparable {
     }
 }
 
-/**
- * Allows comparing objects. Based on Java's Comparable interface.
- *
- */
-interface IComparable {
-    static function compare(self $a, self $b);
-}
 ?>
