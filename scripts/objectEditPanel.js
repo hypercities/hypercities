@@ -3608,17 +3608,24 @@ HyperCities.objectEditPanel = function() {
 		$("#" + IDS.author, panelHead)
 			.val(objectData.creator);
 
+        var startTimeData = HyperCities.util.parseDateTime(objectData.dateFrom),
+		    endTimeData = HyperCities.util.parseDateTime(objectData.dateTo);
+
 		startTime
-			.dateEntry('setDate', HyperCities.util.parseDateTime(objectData.dateFrom));
+			.dateEntry('setDate', startTimeData);
 
 		endTime
-			.dateEntry('setDate', HyperCities.util.parseDateTime(objectData.dateTo));
+			.dateEntry('setDate', endTimeData);
 
 		// Disable Timespan in folder editor
 		if (_objectType === HyperCities.config.HC_OBJECT_TYPE.FOLDER) {
 			startTime.dateEntry('disable');
 			endTime.dateEntry('disable');
 		}
+        
+		HyperCities.control.timeSlider.setTime(
+			null, startTimeData, endTimeData, false, false
+		);
 
 		if (objectData.copyright) {
 			licenseType = $("#" + objectData.copyright, licensePanel);
